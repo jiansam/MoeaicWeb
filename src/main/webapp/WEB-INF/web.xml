@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<web-app version="2.4">
+	<display-name>經濟部投資審議委員會官方網站</display-name>
+	<description>經濟部投資審議委員會官方網站</description>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<page-encoding>UTF-8</page-encoding>
+		</jsp-property-group>
+	</jsp-config>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<context-param>
+	    <param-name>IPList</param-name>
+	    <param-value>
+	    	127.0.0.1, 0:0:0:0:0:0:0:1,
+	    	192.168.1., 192.168.2., 
+	    	125.227.1.19, 125.227.1.20, 125.227.1.21, 125.227.1.22, 125.227.1.23, 125.227.1.24,
+	    	125.227.190.175, 125.227.190.176, 125.227.190.177, 125.227.190.178, 125.227.190.179, 125.227.190.180,
+	    	192.83.168., 192.192.124.,
+	    	61.60.74.,
+	    	172.31., 172.26,
+	    	2001:4420:6031:1:, 2001:4420:6031:0001:, 2001:4420:6031:2:, 2001:4420:6031:0002:
+	    </param-value>
+	</context-param>
+	
+	<context-param>
+	    <param-name>SynchronizeURL</param-name>
+ 	    <param-value>http://172.31.254.151</param-value>
+<!-- 	    <param-value>http://125.227.190.178</param-value> -->
+  	</context-param>
+  	
+  	<context-param>
+	    <param-name>console</param-name>
+	    <param-value>false</param-value>
+  	</context-param>
+	
+	<filter>
+		<filter-name>CommonFilter</filter-name>
+		<filter-class>gov.moeaic.web.filter.CommonFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CommonFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>HttpHeaderSecurityFilter</filter-name>
+		<filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
+		<init-param>
+			<param-name>hstsMaxAgeSeconds</param-name>
+			<param-value>31536000</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>HttpHeaderSecurityFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>LoginCheckFilter</filter-name>
+		<filter-class>gov.moeaic.web.filter.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/console/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- =================================================================== -->
+	<!-- 定時執行工作 -->
+	<!-- =================================================================== -->
+	<listener>
+  		<listener-class>gov.moeaic.web.listener.BackgroundJobManager</listener-class>
+  	</listener>
+	
+	<context-param>
+		<param-name>images_upload_directory</param-name>
+		<param-value>/images/upload</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>CaptchaServlet</servlet-name>
+		<servlet-class>org.dasin.web.servlet.CaptchaServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CaptchaServlet</servlet-name>
+		<url-pattern>/captcha</url-pattern>
+	</servlet-mapping>
+	
+	<!-- =================================================================== -->
+	<!-- Log記錄 -->
+	<!-- =================================================================== -->
+
+	<servlet>
+		<servlet-name>logAccessByHand</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.LogByHandServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logAccessByHand</servlet-name>
+		<url-pattern>/console/logAccessByHand.view</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>logAccess</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.LogAccessServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logAccess</servlet-name>
+		<url-pattern>/console/logAccess.view</url-pattern>
+	</servlet-mapping>		
+	
+	<!-- =================================================================== -->
+	<!-- 文章編輯 -->
+	<!-- =================================================================== -->
+
+	<servlet>
+		<servlet-name>console/edit-pages</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.PagesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>console/edit-pages</servlet-name>
+		<url-pattern>/console/edit-pages.view</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- =================================================================== -->
+	<!-- 網站連結管理 - 新增更新WebName&上傳圖片 -->
+	<!-- =================================================================== -->
+
+	<servlet>
+		<servlet-name>console/edit-WebNameImage</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.WebNameImageServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>console/edit-WebNameImage</servlet-name>
+		<url-pattern>/console/edit-WebNameImage.view</url-pattern>
+	</servlet-mapping>
+
+	<!-- =================================================================== -->
+	<!-- PagesNewsFile - 上傳檔案 -->
+	<!-- =================================================================== -->
+
+	<servlet>
+		<servlet-name>console/edit-PagesNewsFile</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.PagesNewsFileServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>console/edit-PagesNewsFile</servlet-name>
+		<url-pattern>/console/edit-pagesNewsFile.view</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>console/execelUpload</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.UploadExcelServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>console/execelUpload</servlet-name>
+		<url-pattern>/console/execelUpload.view</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>console/PagesNewsFile-load</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.FileLoadServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>console/PagesNewsFile-load</servlet-name>
+		<url-pattern>/download-file.jsp</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- =================================================================== -->
+	<!-- FrontPages - 前台頁面 -->
+	<!-- =================================================================== -->
+
+	<servlet>
+		<servlet-name>/about</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.FrontPagesServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>/about</servlet-name>
+		<url-pattern>/about.view</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>/news</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.FrontNewsServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>/news</servlet-name>
+		<url-pattern>/news.view</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>/business_category</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.FrontExcelCategoryServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>/business_category</servlet-name>
+		<url-pattern>/business_category.view</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>/business_category</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.FrontExcelCategoryServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>/business_category</servlet-name>
+		<url-pattern>/download-excel.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>/links</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.FrontWebsiteLinks
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>/links</servlet-name>
+		<url-pattern>/links.view</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>/businessPub</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.FrontBusinessPubServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>/businessPub</servlet-name>
+		<url-pattern>/businessPub.view</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>
+		<servlet-name>/openData</servlet-name>
+		<servlet-class>gov.moeaic.sql.controller.FrontOpenDataServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>/openData</servlet-name>
+		<url-pattern>/openData.view</url-pattern>
+	</servlet-mapping>	
+
+	<!-- =================================================================== -->
+	<!-- FrontPages - RSS -->
+	<!-- =================================================================== -->
+	<servlet>
+		<servlet-name>NewsRSSServlet_zh</servlet-name>
+		<servlet-class>gov.moeaic.web.servlet.NewsRSSServlet</servlet-class>
+		<init-param>
+			<param-name>language</param-name>
+			<param-value>zh-tw</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewsRSSServlet_zh</servlet-name>
+		<url-pattern>/rss-news-zh-tw.xml</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>NewsRSSServlet_en</servlet-name>
+		<servlet-class>gov.moeaic.web.servlet.NewsRSSServlet</servlet-class>
+		<init-param>
+			<param-name>language</param-name>
+			<param-value>en-us</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewsRSSServlet_en</servlet-name>
+		<url-pattern>/rss-news-en-us.xml</url-pattern>
+	</servlet-mapping>
+	
+	<!-- =================================================================== -->
+	<!-- 同步圖檔 -->
+	<!-- =================================================================== -->
+	<servlet>
+		<servlet-name>ImageSynchronizeServlet</servlet-name>
+		<servlet-class>gov.moeaic.web.servlet.ImageSynchronizeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImageSynchronizeServlet</servlet-name>
+		<url-pattern>/imagesynchronize</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>WebNameSynchronizeServlet</servlet-name>
+		<servlet-class>gov.moeaic.web.servlet.WebNameSynchronizeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebNameSynchronizeServlet</servlet-name>
+		<url-pattern>/webnamesynchronize</url-pattern>
+	</servlet-mapping>
+
+	<!-- =================================================================== -->
+	<!-- errorPages - 錯誤頁面 -->
+	<!-- =================================================================== -->
+	<error-page>
+		<error-code>400</error-code>
+		<location>/error-page.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>401</error-code>
+		<location>/error-page.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/error-page.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error-page.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/error-page.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error-page.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error-page.jsp</location>
+	</error-page>
+	
+	<!-- =================================================================== -->
+	<!-- 強制http跳轉 https -->
+	<!-- =================================================================== -->
+	<security-constraint>
+	    <display-name>For RSS</display-name>
+	    <web-resource-collection>
+	        <web-resource-name>forHttp</web-resource-name>
+	        <description>forHttp</description>
+			<url-pattern>/rss-news-zh-tw.xml</url-pattern>
+			<url-pattern>/rss-news-en-us.xml</url-pattern>
+			<url-pattern>/download-file.jsp</url-pattern>
+			<url-pattern>/imagesynchronize</url-pattern>
+			<url-pattern>/webnamesynchronize</url-pattern>
+	    </web-resource-collection>
+	    <user-data-constraint>
+	        <transport-guarantee>NONE</transport-guarantee>
+	    </user-data-constraint>
+	</security-constraint>
+	
+  	<security-constraint>
+	    <display-name>ConstraintHTTPS</display-name>
+	    <web-resource-collection>
+	        <web-resource-name>forHttps</web-resource-name>
+	        <description>forHttps</description>
+	        <url-pattern>/console</url-pattern>
+			<url-pattern>/*</url-pattern>
+	    </web-resource-collection>
+	    <user-data-constraint>
+	        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+	    </user-data-constraint>
+	</security-constraint> 
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>restricted methods</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+			<http-method>OPTIONS</http-method>
+		</web-resource-collection>
+		<auth-constraint />
+	</security-constraint>
+</web-app>

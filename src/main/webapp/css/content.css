@@ -1,0 +1,244 @@
+/* CSS Document */
+a:focus img, .bordered-focus:focus,
+dd a:focus, #goPrev:focus, #goNext:focus{
+	border:1px solid blue;
+}
+
+#divTitleBorder {
+	width:100%;
+	max-height:210px;
+}
+#pageTitle{
+	padding-top:130px;
+	padding-bottom:90px;
+	color:#245091;
+	font-size:22px;
+	font-weight:bold;
+	/*	width:35%;
+	text-align:right; */
+}
+#divLine {
+	height:3px;
+	background:#f5f3c7;
+}
+#divContent {
+	display: table;
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:15px;
+	padding-right:15px;
+	font-size:16px;
+	line-height:32px;
+}
+#divWhiteBack{
+	height:100%
+}
+
+/* 左選單 */
+#divLeftMenu {
+    position:absolute;
+	display: table-cell;
+	width:140px;
+	background:#efefef;
+	border-radius: 6px;
+	margin-top:170px;
+	margin-left:20px;
+	margin-right:20px;
+	padding-bottom:50px;
+	letter-spacing:3px;
+}
+#divLeftMenu li {
+	color:#0064a1;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+#menuTitle {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background:#245091;
+	color:#FFFFFF;
+	padding-left:15px;
+	padding-right:15px;
+	line-height:40px;
+}
+
+
+/* 右內容 */
+#divRightContent {
+	display: table;
+	width: 100%;
+	margin-top:-85px;
+}
+
+/* 表格內容 */
+#divGroup {
+	padding:50px;
+}
+.divGroupTitle {
+	display:block;
+	background:#245091;
+	color:#FFFFFF;
+	width:100%;
+	padding-left:40px;
+}
+
+.divTable {
+	padding:20px;
+	padding-left:40px;
+	display:table;
+}
+
+.divTable_tr {
+	display:table-row;
+}
+.divTable_td {
+	display:table-cell;
+}
+.td_title {
+	font-weight:bold;
+	width:100px;
+}
+.divFileGroup {
+	display:block;
+	width:100%;
+	height:100%
+}
+.divFileBox {
+	padding:10px;
+	margin-right:10px;
+	border-width:2px;
+	border-style:solid;
+	border-color:#245091;
+	border-radius:5px;
+	float:left;
+	min-width:100px;
+	height:100px;
+}
+.divFileBox img {
+	width:60px;
+	height:45px;
+	display:block; 
+	margin:auto;
+}
+/* 新聞 */
+.divNewsContent{
+	margin-bottom:150px;
+}
+.divNewsTitle {
+	color:#245091;
+	font-weight:bold;
+}
+
+/* 分頁選單 */
+#horizontalTab {
+	height:100%;
+	margin-bottom:50px;
+
+}
+.ui-tabs .ui-tabs-panel {
+	border:1px solid #efefef;
+	background:#efefef;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px #606060;
+}
+.ui-widget-header {
+	background:#FFFFFF;
+}
+
+.horizontalTab {
+
+}
+
+h2.resp-accordion {
+	font-size:17px;
+}
+#horizontalTab th{
+	color:#245091;
+	text-align:center;
+	font-weight: bold;
+}
+#horizontalTab td{
+	border-style:dashed;
+	border-width:0px;
+	border-color:#9F9F9F;
+	border-top-width:1px;
+}
+
+
+@media screen and (max-width: 767px) {
+	#divGroup{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	.resp-tab-content {
+		padding:5px;
+	}
+	.resp-tab-content {
+		border-radius:0px;
+	}
+}
+/* desktop md */
+@media screen and (min-width: 992px) {
+	
+	#divGroup {
+		padding-left:100px;
+		padding-right:100px;
+	}
+	#divRightContent {
+		padding-top:30px;
+		padding-left:220px;
+		padding-right:40px;
+		min-height:800px;  /*右方內容頁高度*/
+	}
+	#divLine {
+		margin-left:20px;
+		margin-right:40px;
+	}
+}
+
+#divLeftMenu a {
+	color: #0064A1;
+}
+
+#divLeftMenu a:hover {
+	color: #FF8000;
+}
+
+.compact-letters a, .compact-letters p{
+	letter-spacing: 0px;
+}
+
+#divContent div.container{
+	min-height: 650px;   /* 右方內容外框高度*/
+}
+
+h3.p {
+	margin: 0px;
+	line-height: 32px;
+}
+
+.u-focusable, .z-focusable {
+	font-size: 16px;
+}
+
+.u-focusable:active, .u-focusable:focus {
+	position: static;
+	width: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	clip: auto;
+	color: white !important;
+}
+
+.z-focusable:active, .z-focusable:focus {
+	position: static;
+	width: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	clip: auto;
+	color: black;
+}

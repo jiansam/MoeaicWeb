@@ -1,0 +1,145 @@
+<%@ tag language="java" pageEncoding="UTF-8" %>
+<%@ tag import="org.dasin.tools.*" %>
+<%@ tag import="java.util.*, java.text.*" %>
+<%@ tag import="gov.moeaic.sql.bean.*, gov.moeaic.sql.dao.*" %>
+<%@ attribute name="language" %>
+
+<div id="divStatWindow" class="FloatWindow">
+ 	<img src="${pageContext.request.contextPath}/images/<%= "en".equalsIgnoreCase(language) ? "floatwindow_Title_Stat_en.png" : "floatwindow_Title_Stat.png" %>" 
+ 		width="300" height="44" alt="" style="float:right;" class="floatwindow_Title" 
+ 		title="<%= "en".equalsIgnoreCase(language) ? "Statistics" : "業務統計" %>"/>
+	<div style="clear: both;background-size: 100%;background-image: url('${pageContext.request.contextPath}/images/floatwindow_Top.png');height: 0;padding-top: 1%;background-repeat:no-repeat;background-position: center;"></div>
+    <div id="divStatBody" class="FloatWindowBody">
+    	<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="10000" data-cycle-slides="> div" 
+    		data-cycle-prev="#stats_previous" data-cycle-next="#stats_next" style="z-index:0;">
+        <div class="FloatWindowText" id="stats_news" style="width: 100%;">
+<%
+	ArrayList<PagesNews> news_list = PagesNewsDAO.getIndexNews("business_ann", language);
+	for(int i = 0;i < news_list.size();i++){
+		PagesNews news = news_list.get(i);
+%>
+			<div class="divMessage">
+				<div class="divMessageImage" <%= news.getIsNew() ? "" : "style='display:none'" %>>
+					<img src="${pageContext.request.contextPath}/images/new.gif" width="30" style="margin-top: 12px;" 
+						alt="<%= "en".equalsIgnoreCase(language) ? "New news" : "最新發表" %>" />
+				</div>
+				<div class="divMessageText">
+					<a href="${pageContext.request.contextPath}/news.view?do=data&id=<%= news.getId() %>&lang=<%= language %>&type=business_ann"
+						title="<%= news.getPublish_date_AD() %> <%= "ch".equalsIgnoreCase(language) ? news.getCh_title() : news.getEn_title() %>">
+						<%= news.getPublish_date_AD() %><br /> <%= "ch".equalsIgnoreCase(language) ? news.getCh_title() : news.getEn_title() %>
+					</a>
+				</div>
+			</div>
+<%
+	}
+%>
+        </div>
+        
+<%
+	for(int i = 0;i < 4;i++){
+%>
+        <div id="columnchart_<%= i %>" style="width: 100%;cursor: pointer;"
+        	onclick="window.location = '${pageContext.request.contextPath}/business_category.view?seq=<%= i %>&lang=<%= language %>';"></div>
+<%
+	}
+%>
+		</div>
+        
+        <div style="float:left;width:60%;padding-left:30%;padding-top:10px;">
+	        <a href="javascript:void(0);" title="<%= "en".equalsIgnoreCase(language) ? "Previous" : "上一頁" %>" id="stats_previous"
+	        	><img src="${pageContext.request.contextPath}/images/icons/left_1.png" style="float:left;"
+	        	alt="<%= "en".equalsIgnoreCase(language) ? "Previous" : "上一頁" %>" /></a>
+		    <a href="javascript:void(0);" title="<%= "en".equalsIgnoreCase(language) ? "Next" : "下一頁" %>" id="stats_next"
+		    	><img src="${pageContext.request.contextPath}/images/icons/right_1.png" style="float:right;"
+		    	 alt="<%= "en".equalsIgnoreCase(language) ? "Next" : "下一頁" %>"/></a>
+        </div>
+        
+        <a href="${pageContext.request.contextPath}/<%= "en".equalsIgnoreCase(language) ? "english" : "chinese" %>/news_bsAn.jsp"
+        	title="<%= "en".equalsIgnoreCase(language) ? "More statistics" : "更多業務統計" %>"><img 
+        	src="${pageContext.request.contextPath}/images/more.png" style="padding-top:10px;float:right;"
+        	 alt="<%= "en".equalsIgnoreCase(language) ? "More statistics" : "更多業務統計" %>"/></a>
+    </div>
+	<div style="clear: both;background-size: 100%;background-image: url('${pageContext.request.contextPath}/images/floatwindow_Bottom.png');height: 0;padding-top: 4.2%;background-repeat:no-repeat;background-position: center;"></div>
+</div>
+
+<script src="${pageContext.request.contextPath}/js/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+	google.charts.load("current", {packages : [ 'corechart' ]});
+	google.charts.setOnLoadCallback(drawChart);
+	
+	function drawChart() {
+		var colors = ['#6285bd', 'red', 'green', 'orange'];
+		var options = {
+			titleTextStyle : {
+				fontSize : 12,
+				color : '#535353'
+			},
+			hAxis : {
+				maxAlternation : 1,
+				titleTextStyle : {
+					fontName : '微軟正黑體, Arial',
+					italic : false
+				},
+				format : '#',
+				gridlines : {
+					color : 'transparent',
+					count : -1
+				}
+			},
+			vAxis : {
+				gridlines : {
+					count : 4
+				},
+				titleTextStyle : {
+					fontName : '微軟正黑體, Arial',
+					italic : false
+				}
+			},
+			legend : {
+				position : 'none'
+			},
+			height : $('#stats_news').height(),
+			width : $('#stats_news').width(),
+			chartArea : {
+				left : 50,
+				right : 10
+			},
+			//backgroundColor: { fill:'transparent' }
+		};
+
+<%
+	DecimalFormat formatter = new DecimalFormat("###,###,###");
+	HashMap<Integer, ArrayList<Business_category>> map = Business_categoryDAO.index_map();
+	String titles[] = "en".equalsIgnoreCase(language) ? new String[]{"Overseas Chinese & Foreign Investment", "Investment From Mainland China", 
+			"Outward Investment", "Investment To Mainland China"} : new String[]{"僑外來臺投資", "陸資來臺投資", "國外(含港澳地區)投資", "對中國大陸投資"};
+	
+	for(int i = 0;i < 4;i++){
+		ArrayList<Business_category> list = map.get(i);
+		StringBuilder sb = new StringBuilder();
+		
+		for(int j = 0;j < 5 && j < list.size();j++){
+			Business_category item = list.get(j);
+			sb.append(sb.length() == 0 ? "" : ",")
+				.append("[")
+				.append(item.getYear() + ", ")
+				.append(item.getAmount() / 1000 + ", ")
+				.append("'" + item.getYear() + " : " + formatter.format(item.getAmount() / 1000)  + "'")
+				.append("]");
+		}
+%>
+		var data_<%= i %> = new google.visualization.DataTable();
+		data_<%= i %>.addColumn('number', 'X');
+		data_<%= i %>.addColumn('number', '<%= "en".equalsIgnoreCase(language) ? "Amount" : "金額" %>');
+		data_<%= i %>.addColumn({type: 'string', role: 'tooltip'});
+		data_<%= i %>.addRows([<%= sb.toString() %>]);
+		
+		var chart_<%= i %> = new google.visualization.ColumnChart(document.getElementById("columnchart_<%= i %>"));
+		options.colors = [colors[<%= i %>]];
+		options.title = '<%= titles[i] + ("en".equalsIgnoreCase(language) ? " (Amount:US$1M)" : " (金額：百萬美元)") %>';
+		chart_<%= i %>.draw(data_<%= i %>, options);
+<%
+	}
+%>
+	}
+</script>

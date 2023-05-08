@@ -1,0 +1,189 @@
+package gov.moeaic.sql.bean;
+
+import java.util.Date;
+
+import org.dasin.cryptography.dCipher;
+
+import gov.moeaic.sql.controller.ToolsUtil;
+
+public class OpenData {
+	int id ;
+	String ch_title;
+	String ch_content;
+	String en_title;
+	String en_content;
+	Date publish_date;
+	int type;
+	String type_str;
+	int seq;
+	boolean ontop;
+	
+	
+	
+	@Override
+	public String toString()
+	{
+		return "OpenData [id=" + id + ", ch_title=" + ch_title + ", ch_content=" + ch_content + ", en_title=" + en_title
+				+ ", en_content=" + en_content + ", publish_date=" + publish_date + ", type=" + type + ", type_str="
+				+ type_str + ", seq=" + seq + ", ontop=" + ontop + "]";
+	}
+
+
+	public String getPublish_date_ROC(){
+		String result = "";
+		if(publish_date!=null){
+			try {
+				int CHyear = Integer.valueOf(ToolsUtil.dateToChange(publish_date, "yyyy")) -1911 ;
+				String m_d = ToolsUtil.dateToChange(publish_date, "MM/dd");
+				result = String.valueOf(CHyear) +"/"+ m_d;
+			} catch (NumberFormatException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}	
+	
+	
+	public String getPublish_date_AD(){
+		String result = "";
+		if(publish_date!=null){
+			try {
+				int CHyear = Integer.valueOf(ToolsUtil.dateToChange(publish_date, "yyyy")) ;
+				String m_d = ToolsUtil.dateToChange(publish_date, "MM/dd");
+				result = String.valueOf(CHyear) +"/"+ m_d;
+			} catch (NumberFormatException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}
+	
+	public void setPublish_date_ROC(String publish_date, String publish_APM, String publish_time)
+	{
+		Date result = null;
+		if(publish_date.trim().length()!=0 && publish_time.trim().length()!=0){
+			try {
+				String[] ary = publish_date.split("/");
+				String date = (Integer.valueOf(ary[0]) + 1911) + "-" + ary[1] + "-" + ary[2] 
+								+ " " + publish_APM + " " + publish_time;
+				result = ToolsUtil.dateToChange(date, "yyyy-MM-dd a hh:mm");
+			} catch (NumberFormatException e) {
+				e.printStackTrace();
+			}
+		}
+		if(result == null){
+			result = new Date();
+		}
+		this.publish_date = result;
+	}
+	
+	public void setPublish_date_AD(String publish_date, String publish_APM, String publish_time)
+	{
+		Date result = null;
+		if(publish_date.trim().length()!=0 && publish_time.trim().length()!=0){
+			try {
+				String[] ary = publish_date.split("/");
+				String date = ary[0] + "-" + ary[1] + "-" + ary[2] 
+								+ " " + publish_APM + " " + publish_time;
+				result = ToolsUtil.dateToChange(date, "yyyy-MM-dd a hh:mm");
+			} catch (NumberFormatException e) {
+				e.printStackTrace();
+			}
+		}
+		if(result == null){
+			result = new Date();
+		}
+		this.publish_date = result;
+	}
+	
+	public String getPublish_APM()
+	{
+		String result = "";
+		if(publish_date!=null){
+			result = ToolsUtil.dateToChangeTime(publish_date, "a", "EN");
+		}
+		return result;
+	}
+
+	public String getPublish_Time()
+	{
+		String result = "";
+		if(publish_date!=null){
+			result = ToolsUtil.dateToChangeTime(publish_date, "hh:mm", "EN");
+		}
+		return result;
+	}	
+	
+	public String getId_encrypt()
+	{
+		return dCipher.encrypt(String.valueOf(id));
+	}	
+	
+	public String getType_str()
+	{
+		return type_str;
+	}
+
+	public void setType_str(String type_str)
+	{
+		this.type_str = type_str;
+	}
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCh_title() {
+		return ch_title;
+	}
+	public void setCh_title(String ch_title) {
+		this.ch_title = ch_title;
+	}
+	public String getCh_content() {
+		return ch_content;
+	}
+	public void setCh_content(String ch_content) {
+		this.ch_content = ch_content;
+	}
+	public String getEn_title() {
+		return en_title;
+	}
+	public void setEn_title(String en_title) {
+		this.en_title = en_title;
+	}
+	public String getEn_content() {
+		return en_content;
+	}
+	public void setEn_content(String en_content) {
+		this.en_content = en_content;
+	}
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public int getSeq() {
+		return seq;
+	}
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
+	public boolean getOntop() {
+		return ontop;
+	}
+	public void setOntop(boolean ontop) {
+		this.ontop = ontop;
+	}
+	public Date getPublish_date()
+	{
+		return publish_date;
+	}
+	public void setPublish_date(Date publish_date)
+	{
+		this.publish_date = publish_date;
+	}
+	
+}

@@ -1,0 +1,381 @@
+/* CSS Document */
+
+body {
+    font-family: \5FAE\8EDF\6B63\9ED1\9AD4, Arial;
+    margin: 0;
+    color: #000000;
+    font-size: 100%;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+a {
+	color:#000000;
+}
+a:hover {
+	color: #FF8000;
+	text-decoration: none;
+}
+
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus {
+    background-color: #034EA1;
+    color: #FFFFFF;
+}
+
+.bx-wrapper .bx-prev {
+	visibility: hidden;
+}
+.bx-wrapper .bx-next {
+	visibility: hidden;
+}
+.bx-wrapper .bx-viewport { 
+    background:transparent;
+	box-shadow:none;
+	border:0px;
+}
+
+
+/* 頂部區塊 */
+.ImgLogo {
+	width: 385px;
+}
+
+#divHeader {
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+	vertical-align:bottom;
+	padding-top:20px;
+}
+#divSearch {
+    position: absolute;
+    right: 0;
+    text-align: right;
+	display: table;
+    float: right;
+	bottom:0px;
+}
+#divTopMenu{
+	font-size:18px;
+	vertical-align:center;
+}
+#divTopMenu .nav > li > a {
+	color:#333333;
+	padding: 5px;
+}
+
+#divTopMenu .nav > li > a:hover,
+#divTopMenu .nav > li > a:focus {
+    color: #FF8000;
+}
+/* 中心選單 */
+#divMenu {
+	font-size:18px;
+	position:relative;
+	z-index: 1;
+}
+
+/* 中心形象圖 */
+#divSlideAD {
+    position: absolute;
+	top: 0px;
+    margin-top: 175px;
+    width: 100%;
+    z-index: -2;
+}
+
+#divFloat {
+	position: relative;
+	margin:0 auto;
+
+}
+#divNews {
+	margin:0 0;
+	width:100%;
+	height:auto;
+	position:relative;
+	text-align:left;
+}
+.FloatWindowImage {
+	width:100%;
+	display:block;
+}
+
+.divMessage {
+	padding-top:5px;
+	/* padding-bottom:5px; */
+	font-size:14px;
+	line-height: 130%;
+	display:block;
+	border-bottom-style:solid;
+	border-bottom-color:#FFFFFF;
+	border-bottom-width:thin;
+	overflow : auto;
+}
+
+#divStatBody {
+	text-indent:30px;
+}
+
+.divMessageImage{
+	width:9%; 
+	float:left;
+	display:block;
+}
+
+.divMessageText{
+	width:91%; 
+	float:left;
+	padding-left:10px;
+}
+
+.FloatWindowBody {
+	background-image:url(../image/floatwindow_body.gif);
+	background-repeat:repeat-y;
+	background-size:contain;
+	padding-top:10px;
+	padding-left:7%;
+	padding-right:7%;
+	width:100%;
+	padding-bottom:40px;
+}
+
+.FloatWindowText {
+	height:120px;
+	overflow:auto;
+}	
+/* 浮動按鈕及資訊框 */
+
+.buttonAD {
+	/* display:table; */
+	width:200px;
+	height:200px;
+	text-align:center;
+}
+.buttonAD img{
+	vertical-align:top;
+	width:140px;
+	
+}
+
+/* 底層 */
+#divFootLayer {
+	position:relative;
+	margin-top:10px;
+	z-index:2;
+}
+
+#divLink {
+	background:#f5f3c7;
+}
+
+#divLinkTitle {
+	color: #434343; 
+	font-weight: bold; 
+	font-size: 18pt;
+	line-height: 300%;
+}
+
+/* 目錄 */
+#divFatFooter {
+	letter-spacing:2px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size: 17px;
+}
+#divFatFooter dl {
+	margin:0px;
+}
+#divFatFooter dt {
+	padding-left:20px;
+	font-weight: bold;
+	color: #FF8000;
+}
+#divFatFooter ul {
+	padding-left:0px;
+}
+#divFatFooter li {
+	padding-left:20px;
+	list-style-type:none;
+	line-height: 200%;
+}
+.cell{
+	float:left;
+	display: block; 
+	max-width:100%;
+	min-width: 120px;
+	height: 100%;
+}
+/*
+#divFatFooter .cell {
+	border-color:#cccccc;
+	border-right-width:1px;
+	border-right-style:solid;
+} */
+
+/* 版權頁 */
+#divPageBottom {
+    color: #ffffff;
+    background: #333333;
+    padding: 20px 0px;
+    font-size: 16px;
+}
+#divPageBottom .information {
+    float: left;
+    margin-left: 10px;
+	
+}
+#divPageBottom .information_image {
+    float: right;
+    margin-left: 10px;
+}
+
+@media print {
+
+}
+
+/* mobile xs */
+@media screen and (max-width: 767px) {
+	#divSearch{
+		display: none;
+	}
+	/*
+	#divFatFooter {
+		display: none;
+	} */
+	#divFloatRight {
+		margin-left:auto;
+		margin-right:auto ;
+		margin:0 auto;
+		display:block;
+		/* width:600px; */
+	}	
+	.FloatWindow {
+		float:left;
+		width:50%;
+		height:auto;
+	}
+	#divStatText {
+		width:100%;
+		height:100%;
+	}
+	.FloatWindowBody {
+		height:170px;
+	}
+}
+
+
+/* mobile xss */
+@media screen and (max-width: 602px) {
+	#divFloatRight {
+		margin-left:auto;
+		margin-right:auto ;
+		margin:0 auto;
+		display:block;
+		/* width:600px; */
+	}
+	.MessageWindow{
+		width:100%;
+	}	
+	.FloatWindow {
+		display:block;
+		width:100%;
+	}
+	.FloatWindowBody {
+		height:100%;
+	}	
+	.FloatWindowText {
+		height:100%;
+		overflow:auto;
+	}	
+
+}
+
+/* tablet sm */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	#divSearch{
+		display: none;
+	} /*
+	#divFatFooter {
+		display: none;
+	} */
+	#divFloatLeft {
+		display:block;
+		margin-top:100px;
+		width:600px;
+	}
+	#divFloatRight {
+		margin:0 auto;
+		display:block;
+		width:600px;
+	}
+	.FloatWindow {
+		float:left;
+		display:block;
+		width:50%;
+	}
+	.FloatWindowBody {
+		height:170px;
+	}
+
+}
+
+
+/* desktop md */
+@media screen and (min-width: 992px) {
+	.dropdown-menu li:hover .sub-menu {visibility: visible;}
+	.dropdown:hover .dropdown-menu {display: block;}
+	.TopNav {
+	width:14%;
+	}
+
+	#divFloat{
+		width:900px;
+		margin:0 auto;
+	}
+	#divFloatLeft {
+		float:left;
+		display:block;
+		margin-top:100px;
+		margin-right:50px;
+		width:600px;
+	}
+	#divFloatRight {
+		margin-left:10px;
+		float:left;
+		width:200px;
+		display:block;
+	}
+	.FloatWindow {
+		width:300px;
+		display:block;
+	}
+	#divNewsBody .FloatWindowText {
+		height:150px;
+	}
+	#divFatFooter {
+		margin:0 auto;
+		display:block;
+		width:1140px;
+	}
+	#divFatFooterTool {
+		margin-left:-35px;
+	}
+
+}
+/* large-desktop lg */
+@media screen and (min-width: 1171px) {
+	#divSlideAD img {
+        /* visibility: hidden; */
+        width: 1171px;
+    }
+}
