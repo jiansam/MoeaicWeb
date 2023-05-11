@@ -7,6 +7,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+
 import org.dasin.tools.dWebTools;
 
 import gov.moeaic.sql.SQL;
@@ -842,6 +843,12 @@ public class PagesNewsDAO
 		bean.setType(rs.getString("type"));
 		bean.setRss_text(rs.getString("rss_text"));
 		bean.setRss_image(rs.getString("rss_image"));
+		bean.setRss_text_ch(rs.getString("rss_text_ch"));
+		bean.setRss_image_ch(rs.getString("rss_image_ch"));
+		bean.setPhoto_ch(rs.getString("photo_ch"));
+		bean.setPhoto_en(rs.getString("photo_en"));
+		bean.setImage_type_ch(rs.getString("image_type_ch"));
+		bean.setImage_type_en(rs.getString("image_type_en"));
 		return bean;
 	}
 }

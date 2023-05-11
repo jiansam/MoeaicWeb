@@ -35,7 +35,22 @@
 					  	
 					  	<tr>
 					  		<th>Content</th>
-					  		<td style="word-break: break-all;">${newsOne.en_content}</td>
+					  		<td id="con" style="word-break: break-all;">
+					  			<div>${newsOne.en_content}</div>
+					  			<!-- RSS 圖片 -->
+					  			<div>
+					  				<c:choose>
+									   
+									   <c:when test="${newsOne.image_type_en == '0'}"> 
+											<img alt="${newsOne.rss_text }" src="${pageContext.request.contextPath}${newsOne.rss_image }">	   		
+									   </c:when>
+									   
+									   <c:otherwise>
+									   		<img alt="${newsOne.rss_text }" src="${pageContext.request.contextPath}${newsOne.photo_en }">
+									   </c:otherwise>
+									</c:choose>
+					  			</div>
+					  		</td>
 					  	</tr>			
 
 						<c:if test="${not empty files_en}">

@@ -1,11 +1,8 @@
 package gov.moeaic.sql.bean;
 
 import java.io.Serializable;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
 
 import gov.moeaic.sql.controller.ToolsUtil;
 
@@ -26,7 +23,13 @@ public class PagesNews implements Serializable
 	String type;
 	String rss_text; //108-12-5 for RSS 新增
 	String rss_image; //108-12-5 for RSS 新增
+	String rss_text_ch; //108-12-5 for RSS 新增
+	String rss_image_ch; //108-12-5 for RSS 新增
+	String photo_ch;
+	String photo_en;
 	
+	String image_type_ch;
+	String image_type_en;
 
 	@Override
 	public String toString()
@@ -50,6 +53,54 @@ public class PagesNews implements Serializable
 	}
 	
 	
+
+	public String getRss_text_ch() {
+		return rss_text_ch;
+	}
+
+	public void setRss_text_ch(String rss_text_ch) {
+		this.rss_text_ch = rss_text_ch;
+	}
+
+	public String getRss_image_ch() {
+		return rss_image_ch;
+	}
+
+	public void setRss_image_ch(String rss_image_ch) {
+		this.rss_image_ch = rss_image_ch;
+	}
+
+	public String getPhoto_ch() {
+		return photo_ch;
+	}
+
+	public void setPhoto_ch(String photo_ch) {
+		this.photo_ch = photo_ch;
+	}
+
+	public String getPhoto_en() {
+		return photo_en;
+	}
+
+	public void setPhoto_en(String photo_en) {
+		this.photo_en = photo_en;
+	}
+
+	public String getImage_type_ch() {
+		return image_type_ch;
+	}
+
+	public void setImage_type_ch(String image_type_ch) {
+		this.image_type_ch = image_type_ch;
+	}
+
+	public String getImage_type_en() {
+		return image_type_en;
+	}
+
+	public void setImage_type_en(String image_type_en) {
+		this.image_type_en = image_type_en;
+	}
 
 	public int getId()
 	{

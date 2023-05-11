@@ -36,8 +36,26 @@
 					  		<th>發佈時間</th>
 					  		<td>${newsOne.publish_date_AD}</td></tr>
 					  	
-					  	<tr><th>發佈內容</th>
-					  		<td id="con">${newsOne.ch_content}</td></tr>			
+					  	<tr>
+					  		<th>發佈內容</th>
+					  		<td id="con">
+					  			<div>${newsOne.ch_content}</div>
+					  			
+					  			<!-- RSS 圖片 -->
+					  			<div>
+					  				<c:choose>
+									  
+									   <c:when test="${newsOne.image_type_ch == '0'}"> 
+											<img alt="${newsOne.rss_text_ch }" src="${pageContext.request.contextPath}${newsOne.rss_image_ch }">	   		
+									   </c:when>
+									   
+									   <c:otherwise>
+									   		<img alt="${newsOne.rss_text_ch }" src="${pageContext.request.contextPath}${newsOne.photo_ch }">
+									   </c:otherwise>
+									</c:choose>
+					  			</div>
+					  		</td>
+					  	</tr>			
 						
 						<c:if test="${not empty files_ch}">
 						<tr>
