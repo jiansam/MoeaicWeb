@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang3.StringUtils;
 import org.dasin.cryptography.dCipher;
 import org.dasin.tools.AsciiUtil;
 import org.dasin.tools.dTools;
@@ -316,14 +317,44 @@ public class NewsRSSServlet extends HttpServlet{
 				
 				item.addContent(relateFiles);
 				// ------------------------------------------------------
-
+				
+				
+				String rss_iamge = "";
+				String rss_text =  "";
+				
+				if ("zh-tw".equals(lang)) {
+					if ("0.".equals(bean.getImage_type_ch())) {
+						rss_iamge = bean.getRss_image_ch();
+					} else {
+						rss_iamge = bean.getPhoto_ch();
+						//沒上傳圖片用 預設圖片
+						if (StringUtils.isEmpty(rss_iamge)) {
+							rss_iamge = bean.getRss_image_ch();
+						}
+					}
+					rss_text = bean.getRss_text_ch();
+				} else {
+					if ("0.".equals(bean.getImage_type_en())) {
+						rss_iamge = bean.getRss_image();
+					} else {
+						rss_iamge = bean.getPhoto_en();
+						
+						//沒上傳圖片用 預設圖片
+						if (StringUtils.isEmpty(rss_iamge)) {
+							rss_iamge = bean.getRss_image();
+						}
+					}
+					rss_text = bean.getRss_text();
+				}
+				
+				
 				//2019.12.12.dasin.因經濟部要求，英文新聞必須包含至少一個圖檔。
-				Element relateImages = dTools.isEmpty(bean.getRss_image()) ? new Element("RelateImages").setText("") :
-					new Element("RelateImages").addContent(new Element("ImageItem")
-						.addContent(new Element("ImageName").setText("zh-tw".equals(lang) ? dTools.trim(bean.getRss_text()) :
-							AsciiUtil.sbc2dbcCase(dTools.trim(bean.getRss_text()))))
-						.addContent(new Element("ImageExt").setText(bean.getRss_image().substring(bean.getRss_image().lastIndexOf(".") + 1)))
-						.addContent(new Element("ImageUrl").setText(request.getScheme() + "://" + request.getServerName() + bean.getRss_image()))
+				Element relateImages = dTools.isEmpty(rss_iamge) ? new Element("RelateImages").setText("") :
+					   new Element("RelateImages").addContent(new Element("ImageItem")
+						.addContent(new Element("ImageName").setText("zh-tw".equals(lang) ? dTools.trim(rss_text) :
+							AsciiUtil.sbc2dbcCase(dTools.trim(rss_text))))
+						.addContent(new Element("ImageExt").setText(rss_iamge.substring(rss_iamge.lastIndexOf(".") + 1)))
+						.addContent(new Element("ImageUrl").setText(request.getScheme() + "://" + request.getServerName() + rss_iamge))
 					);
 				item.addContent(relateImages);
 				channel.addContent(item);
