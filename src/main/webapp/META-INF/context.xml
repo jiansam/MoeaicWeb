@@ -7,14 +7,23 @@
  		url="jdbc:sqlserver://127.0.0.1:1433;DatabaseName=MoeaicWeb;SelectMethod=cursor"
  		maxWait="-1" maxActive="100" maxIdle="30" validationInterval="60000" testOnBorrow="true" 
  		validationQuery="SELECT 1" jdbcInterceptors="StatementFinalizer" />	
-	<!-- 	
-	<Resource name="jdbc/moea" auth="Container" type="javax.sql.DataSource"  
+	 					
+ 	<!--測試環境 -
+	<Resource name="jdbc/moea" auth="Container" type="javax.sql.DataSource"
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" username="sa"
+		password="isam.27356006" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+		url="jdbc:sqlserver://125.227.190.178:1433;DatabaseName=MoeaicWeb;SelectMethod=cursor"
+		maxWait="-1" maxActive="100" maxIdle="30" validationInterval="60000" testOnBorrow="true" 
+		validationQuery="SELECT 1" jdbcInterceptors="StatementFinalizer" />	
+		-->	
+		
+	 <!-- 
+ 	<Resource name="jdbc/moea" auth="Container" type="javax.sql.DataSource"  
  		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" username="admin"  
- 		password="admin" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"  
+ 		password="1qaz@WSX" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"  
  		url="jdbc:sqlserver://127.0.0.1:1433;DatabaseName=MoeaicWeb;SelectMethod=cursor"  
  		maxWait="-1" maxActive="100" maxIdle="30" validationInterval="60000" testOnBorrow="true"   
  		validationQuery="SELECT 1" jdbcInterceptors="StatementFinalizer" />	  
-				
  -->
 </Context>
 

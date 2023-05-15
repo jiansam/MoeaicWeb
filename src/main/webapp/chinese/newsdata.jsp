@@ -9,6 +9,15 @@
 	<title>${title_ch} - 申辦業務 - 經濟部投資審議委員會(INVESTMENT COMMISSION, MOEA)</title>
 	<style type="text/css">
 		#con br {line-height: 200%; }
+		@media (min-width: 992px) {
+			#con{
+				display:flex;
+			}
+			#con .mimg{
+				flex: 0 0 30%;
+				padding-left:24px;
+			}
+		}
 	</style>
 </head>
 
@@ -42,7 +51,7 @@
 					  			<div>${newsOne.ch_content}</div>
 					  			
 					  			<!-- RSS 圖片 -->
-					  			<div>
+					  			<div class="mimg">
 					  				<c:choose>
 									  
 									   <c:when test="${newsOne.image_type_ch == '0'}"> 

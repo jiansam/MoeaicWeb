@@ -50,6 +50,102 @@
 label {
 	font-weight: normal;
 }
+
+
+	ul.secinfor {
+		display: flex;
+		margin:0 10px;
+	}
+
+	ul.secinfor li.word-level a {
+		display: block;
+		width: 32px;
+		height: 32px;
+		line-height: 32px;
+		margin: 0;
+		padding: 0;
+		font-size: 1em;
+		text-align: center;
+		color: #333;
+		background-color: #c8c8c8;
+	}
+
+	ul.secinfor li.word-level a:hover,
+	ul.secinfor li.word-level a:focus {
+		display: block;
+		width: 32px;
+		height: 32px;
+		line-height: 32px;
+		margin: 0;
+		padding: 0;
+		font-size: 1em;
+		text-align: center;
+		color: #fff;
+		background-color: #245091;
+	}
+	
+	.resp-tab-content.fsmall,
+    .ui-helper-reset.fsmall,
+    .ui-accordion .ui-accordion-header.fsmall {
+        font-size: 75%;
+    }
+
+    .resp-tab-content.fbig,
+    .ui-helper-reset.fbig,
+    .ui-accordion .ui-accordion-header.fbig {
+        font-size: 125%;
+    }
+	
+	.showqa{
+		display: flex;
+		justify-content: flex-end;
+	}
+
+    @media print {
+
+        #divHeader,
+        #divMenu,
+        #divLeftMenu,
+        #divFatFooter,
+        #divPageBottom,
+        #bp_sel,
+        #bp_key,
+        a[href="#top"],
+        .resp-tabs-list,
+        .file_div,
+        .ui-corner-top:not(.ui-state-active),
+        .ui-accordion-content:not(.ui-accordion-content-active) {
+            display: none;
+        }
+
+        .qs+div,
+        #btngroup {
+            display: none !important;
+        }
+		
+		.ui-accordion .ui-accordion-header{
+			border:1px solid #eee;
+		}
+	
+        #faq_accordion {
+            max-width: 900px;
+            padding: 0;
+            margin-top: -80px; 
+        }
+		.resp-tab-content{
+			border:none;
+		}
+        .ui-accordion .ui-accordion-content {
+            padding: 25px;
+        }
+
+        @page {
+            size: A4 portrait;
+            margin: 0cm;
+            orphans: 4;
+            widows: 2;
+        }
+    }
 </style>
 </head>
 
@@ -67,20 +163,35 @@ label {
 						<a id="C" href="#C" accesskey="C" class="sr-only z-focusable" style="float:left;margin-top: 130px;" title="Content area">:::</a>
 						<h3 class="p" id="pageTitle">${title_en}</h3>
 					</div>
-
-					<c:if test="${not empty flow_chart}">
-						<div id="choicediv" style="line-height:22px!important;padding-bottom:14px;text-align:right;">
-							<a href="javascript:void(0)" onclick="openDiv('file_div')" onkeypress="openDiv('file_div')" title="open application file">
-								<img alt="application file" src="${pageContext.request.contextPath}/images/icons/file.jpg" width="32"></a>
-							<a href="javascript:void(0)" onclick="openDiv('flow_div')" onkeypress="openDiv('flow_div')" title="open flow chart">
-								<img alt="flow chart" src="${pageContext.request.contextPath}/images/icons/flow.jpg" width="32"></a>
+					<div style="display: flex;justify-content: flex-end;" id="btngroup">
+						<div class="showqa" style="display:none">
+							<a href="javascript:window.print();" title="Print" class="printbtn" style="display:none">
+								<i class="fa fa-print" aria-hidden="true"></i>Print
+							</a>
+							<ul class="secinfor" style="display:none">
+								<li class="word-level" onclick="changeSize('small');" style="cursor: pointer;"><a href="javascript:;"
+										title="小字級">S</a></li>
+								<li class="word-level" onclick="changeSize('');" style="cursor: pointer;"><a href="javascript:;"
+										title="中字級">M</a>
+								</li>
+								<li class="word-level" onclick="changeSize('big');" style="cursor: pointer;"><a href="javascript:;"
+										title="大字級">L</a>
+								</li>
+							</ul>
 						</div>
-					</c:if>
-
+						<c:if test="${not empty flow_chart}">
+							<div id="choicediv" style="line-height:22px!important;padding-bottom:14px;text-align:right;">
+								<a href="javascript:void(0)" onclick="openDiv('file_div')" onkeypress="openDiv('file_div')" title="open application file">
+									<img alt="application file" src="${pageContext.request.contextPath}/images/icons/file.jpg" width="32"></a>
+								<a href="javascript:void(0)" onclick="openDiv('flow_div')" onkeypress="openDiv('flow_div')" title="open flow chart">
+									<img alt="flow chart" src="${pageContext.request.contextPath}/images/icons/flow.jpg" width="32"></a>
+							</div>
+						</c:if>
+					</div>
 					<div class="flow_div" style="display:none">${flow_chart}</div>
 					<div class="file_div" style="color:gray;line-height:16px!important;padding-bottom:5px;">Please use tab key to choose one of page bookmarks, and then press enter key to show the bookmark's contents.</div>
-					<div class="file_div" >
-						<div id="horizontalTab">
+					<div>
+						<div id="horizontalTab" class="file_div">
 
 							<ul class="resp-tabs-list">
 								<c:forEach var="name" items="${list_name}">
@@ -185,4 +296,51 @@ label {
 
 	<moeaic:footer_en />
 </body>
+<script type="text/javascript">
+    function changeSize(e) {
+        var element = document.querySelectorAll(".ui-helper-reset,.ui-accordion .ui-accordion-header,.resp-tab-content");
+        for (var i = 0; i < element.length; ++i) {
+            element[i].classList.add('fsmall');
+            if (e == "small") {
+                element[i].classList.remove('fbig');
+                element[i].classList.add('fsmall');
+            } else if (e == "big") {
+                element[i].classList.remove('fsmall');
+                element[i].classList.add('fbig');
+            } else {
+                element[i].classList.remove('fsmall');
+                element[i].classList.remove('fbig');
+            }
+        }
+        return false;
+    }
+	$(function(){
+		if($('.resp-tab-item.resp-tab-active.tab-selected').text() == "FAQ"){
+			$('.showqa,.secinfor').show();
+		}
+		$('.resp-tab-item').on('click',function(){
+			let text = $(this).text();
+			if(text == "FAQ"){
+				$('.showqa,.secinfor').fadeIn();
+			}else{
+				$('.showqa,.secinfor').fadeOut();
+				if(!$('.ui-widget-content').is(":hidden")){
+					$('.printbtn').fadeOut();
+				}
+			}
+		});
+		$('.ui-accordion-header').on('click',function(){
+			setTimeout(() => {
+				let active = $('.ui-widget-content').hasClass('ui-accordion-content-active');
+				console.log(active)
+				if(active){
+					$('.printbtn').fadeIn();
+				}else{
+					$('.printbtn').fadeOut();
+				}
+			}, "600");
+			
+		});
+	});
+</script>
 </html>

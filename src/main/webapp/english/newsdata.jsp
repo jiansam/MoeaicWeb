@@ -7,6 +7,17 @@
 <head>
 	<moeaic:libraries_en />
 	<title>INVESTMENT COMMISSION, MOEA - ${title_en}</title>
+	<style>
+		@media (min-width: 992px) {
+			#con{
+				display:flex;
+			}
+			#con .mimg{
+				flex: 0 0 30%;
+				padding-left:24px;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -38,7 +49,7 @@
 					  		<td id="con" style="word-break: break-all;">
 					  			<div>${newsOne.en_content}</div>
 					  			<!-- RSS 圖片 -->
-					  			<div>
+					  			<div class="mimg">
 					  				<c:choose>
 									   
 									   <c:when test="${newsOne.image_type_en == '0'}"> 
