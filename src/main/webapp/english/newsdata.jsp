@@ -8,6 +8,9 @@
 	<moeaic:libraries_en />
 	<title>INVESTMENT COMMISSION, MOEA - ${title_en}</title>
 	<style>
+		#con .mimg img{
+			width:100%;
+		}
 		@media (min-width: 992px) {
 			#con{
 				display:flex;

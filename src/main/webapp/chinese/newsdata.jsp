@@ -9,12 +9,17 @@
 	<title>${title_ch} - 申辦業務 - 經濟部投資審議委員會(INVESTMENT COMMISSION, MOEA)</title>
 	<style type="text/css">
 		#con br {line-height: 200%; }
+		
+		#con .mimg img{
+			width:100%;
+		}
 		@media (min-width: 992px) {
 			#con{
 				display:flex;
 			}
 			#con .mimg{
 				flex: 0 0 30%;
+				max-width:200px;
 				padding-left:24px;
 			}
 		}
