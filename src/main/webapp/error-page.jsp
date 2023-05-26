@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
 
-<head>
+<head> 
 	<moeaic:libraries />
 	<title>找不到網頁</title>
 	<style type="text/css">
