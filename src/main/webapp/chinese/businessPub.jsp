@@ -303,10 +303,10 @@
         return false;
     }
 	$(function(){
-		if($('.resp-tab-item.resp-tab-active.tab-selected').text() == "常見問答集"){
+		if($('.resp-tab-item.resp-tab-active').text() == "常見問答集"){
 			$('.showqa,.secinfor').show();
 		}
-		$('.resp-tab-item').on('click',function(){
+		$('.resp-tab-item,.resp-accordion').on('click',function(){
 			let text = $(this).text();
 			if(text == "常見問答集"){
 				$('.showqa,.secinfor').fadeIn();
@@ -320,7 +320,6 @@
 		$('.ui-accordion-header').on('click',function(){
 			setTimeout(() => {
 				let active = $('.ui-widget-content').hasClass('ui-accordion-content-active');
-				console.log(active)
 				if(active){
 					$('.printbtn').fadeIn();
 				}else{

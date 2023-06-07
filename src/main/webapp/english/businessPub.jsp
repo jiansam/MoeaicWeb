@@ -315,10 +315,10 @@ label {
         return false;
     }
 	$(function(){
-		if($('.resp-tab-item.resp-tab-active.tab-selected').text() == "FAQ"){
+		if($('.resp-tab-item.resp-tab-active').text() == "FAQ"){
 			$('.showqa,.secinfor').show();
 		}
-		$('.resp-tab-item').on('click',function(){
+		$('.resp-tab-item,.resp-accordion').on('click',function(){
 			let text = $(this).text();
 			if(text == "FAQ"){
 				$('.showqa,.secinfor').fadeIn();
@@ -332,7 +332,6 @@ label {
 		$('.ui-accordion-header').on('click',function(){
 			setTimeout(() => {
 				let active = $('.ui-widget-content').hasClass('ui-accordion-content-active');
-				console.log(active)
 				if(active){
 					$('.printbtn').fadeIn();
 				}else{
