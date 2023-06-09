@@ -5,7 +5,7 @@
 <html>
 
 <head>
-	
+	       
 	<console:libraries />
 	<title>經濟部投資審議委員會 - 後台管理</title>
 	<script type="text/javascript">
@@ -46,10 +46,54 @@
 				setPublish_date();
 			}
 			checkShowTop("tabs");
+			
+			$('#photo_ch').change(function() {
+			  var file = $('#photo_ch')[0].files[0];
+			  var reader = new FileReader;
+			  reader.onload = function(e) {
+			    $('#photo_review_ch').attr('src', e.target.result);
+			  };
+			  reader.readAsDataURL(file);
+			});
+			
+			$('#photo_en').change(function() {
+				  var file = $('#photo_en')[0].files[0];
+				  var reader = new FileReader;
+				  reader.onload = function(e) {
+				    $('#photo_review_en').attr('src', e.target.result);
+				  };
+				  reader.readAsDataURL(file);
+			});
+			
+			 $('input:radio[name=image_type_ch]').change(function () {
+	            if ($("input[name='image_type_ch']:checked").val() == '0') {
+	               $("#rss_image_ch_td").show();
+	               $("#photo_ch_td").hide();
+	               $("#photo_review_ch_td").hide();
+	            } else {
+	               $("#rss_image_ch_td").hide();
+		           $("#photo_ch_td").show();
+		           $("#photo_review_ch_td").show();
+	            }
+	        });
+			 
+			 $('input:radio[name=image_type_en]').change(function () {
+	            if ($("input[name='image_type_en']:checked").val() == '0') {
+	               $("#rss_image_en_td").show();
+	               $("#photo_en_td").hide();
+	               $("#photo_review_en_td").hide();
+	            } else {
+	               $("#rss_image_en_td").hide();
+		           $("#photo_en_td").show();
+		           $("#photo_review_en_td").show();
+	            }
+	        });
+			
 		});
+		
 		</script>
 	<!-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/console/pagesNews-common.js"></script>  -->
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/console/pagesNews-common.js?t=20210818"></script> <!--20210818修改-->
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/console/pagesNews-common.js?t=20230508"></script> <!--20210818修改-->
 	
 	<style>
 	.hover-red:hover{
@@ -125,7 +169,7 @@
 								
 								<!-- ===========================================================  -->
 								<div class="table-responsive" id="ch">
-									<form role="form" method="post" >
+									<form id="from_ch" role="form" method="post" enctype="multipart/form-data" >
 										<table id="basic_ch" class="table table-striped table-bordered table-hover">
 											<tbody>
 				
@@ -191,14 +235,96 @@
 															onchange="getValue('ch','sort')" style="width:150px;"> 
 													</td> 
 												</tr>
-
+												
+												<tr>
+													<td>經濟部RSS介接圖片 格式 ${pagesNewsOne.image_type_ch }</td>
+													<td>
+														<input type="radio" name="image_type_ch"   value="0"  ${ pagesNewsOne.image_type_ch == "0" ? 'checked="checked"' : '' } /> 預設
+														<input type="radio" name="image_type_ch"   value="1"  ${ pagesNewsOne.image_type_ch == "1" ? 'checked="checked"' : '' }/> 上傳
+													</td> 
+												</tr>
+												
+												<c:choose>
+													<c:when test="${title.type eq 'new_ann'}">
+														<tr id="rss_image_ch_td"   ${ pagesNewsOne.image_type_ch == "1" ? 'style="display: none;"' : '' }>
+															<td>經濟部RSS介接圖片</td>
+															<td>
+															<label>
+																<input type="radio" name="rss_image_ch" value="/images/news/default/10.jpg" 
+																${pagesNewsOne.rss_image_ch == "/images/news/default/10.jpg"? 'checked="checked"':''}>
+																<img src="${pageContext.request.contextPath }/images/news/default/10.jpg" height="150">
+															</label> 
+															<label>
+																<input type="radio" name="rss_image_ch" value="/images/news/default/003.jpg"
+																${pagesNewsOne.rss_image_ch == "/images/news/default/003.jpg"? 'checked="checked"':''}>
+																<img src="${pageContext.request.contextPath }/images/news/default/003.jpg" height="150">
+															</label>
+															<label>
+																<input type="radio" name="rss_image_ch" value="/images/news/default/04.jpg"
+																${pagesNewsOne.rss_image_ch == "/images/news/default/04.jpg"? 'checked="checked"':''}>
+																<img src="${pageContext.request.contextPath }/images/news/default/04.jpg" height="150">
+															</label>
+															<label>
+																<input type="radio" name="rss_image_ch" value="/images/news/default/005.jpg"
+																${pagesNewsOne.rss_image_ch == "/images/news/default/005.jpg"? 'checked="checked"':''}>
+																<img src="${pageContext.request.contextPath }/images/news/default/005.jpg" height="150">
+															</label><br/>
+															<label>
+																<input type="radio" name="rss_image_ch" value="/images/news/default/05.jpg"
+																${pagesNewsOne.rss_image_ch == "/images/news/default/05.jpg"? 'checked="checked"':''}>
+																<img src="${pageContext.request.contextPath }/images/news/default/05.jpg" height="150">
+															</label>
+															<label>
+																<input type="radio" name="rss_image_ch" value="/images/news/default/01.jpg"
+																${pagesNewsOne.rss_image_ch == "/images/news/default/01.jpg"? 'checked="checked"':''}>
+																<img src="${pageContext.request.contextPath }/images/news/default/01.jpg" height="150">
+															</label>
+															<label>
+																<input type="radio" name="rss_image_ch" value="/images/news/default/013.jpg"
+																${pagesNewsOne.rss_image_ch == "/images/news/default/013.jpg"? 'checked="checked"':''}>
+																<img src="${pageContext.request.contextPath }/images/news/default/013.jpg" height="150">
+															</label>
+															<label>
+																<input type="radio" name="rss_image_ch" value="/images/news/default/014.jpg"
+																${pagesNewsOne.rss_image == "/images/news/default/014.jpg"? 'checked="checked"':''}>
+																<img src="${pageContext.request.contextPath }/images/news/default/014.jpg" height="150">
+															</label>
+															</td> 
+														</tr>
+														<tr id="photo_ch_td" ${ pagesNewsOne.image_type_ch == "0" ? 'style="display: none;"' : '' } >
+														
+															<td>經濟部RSS介接圖片</td>
+															<td>
+																<input id="photo_ch" type="file" name="photo_ch" style="height:auto;" accept="image/*" class="form-control"></td>
+														</tr>
+						
+														<tr id="photo_review_ch_td" ${ pagesNewsOne.image_type_ch == "0" ? 'style="display: none;"' : '' }>
+															<td>圖片預覽</td>
+															<td>
+															     <img id="photo_review_ch" width="150" src="${pagesNewsOne.photo_review_ch}"/>
+															</td>
+														</tr>
+														<tr>
+															<td>介接圖片中文說明<br/>(請使用半形文字)</td>
+															<td>
+																<input type="text" name="rss_text_ch" value="${pagesNewsOne.rss_text_ch}" style="width: 50%;">
+																<input type="button" value="同標題文字" onclick="$('input[name=rss_text_ch]').val($('input[name=ch_title]').val())">
+															</td>
+														</tr>
+														
+													</c:when>
+												</c:choose>
+												
+											
+												
 												<tr>
 													<td colspan="2" style="padding-left:45%;">
+														<input type="hidden" name="photo_ch_temp" value="${pagesNewsOne.photo_ch}" >
 														<input type="hidden" name="type" value="${pagesNewsOne.type}" >
-														<input type="hidden" name="doThing" value="${pagesNewsOne.doThing}_ch" >
+														<input  type="hidden" name="doThing" value="${pagesNewsOne.doThing}_ch" >
 														<input type="hidden" name="id" value="${pagesNewsOne.id}" >
 														<input type="button" value="送出" class="form-control btn btn-primary"
-															onclick="submitContent(this.form, 'pagesNews_basic')" style="width:100px;">
+															onclick="submitContent( this.form , 'pagesNews_basic' , '${pagesNewsOne.doThing}_ch')" style="width:100px;">
 														<span class="spanNote" style="color:red;">（點擊送出鈕後，下方開啟檔案上傳介面）</span></td>
 												</tr>
 												
@@ -310,10 +436,16 @@
 															onchange="getValue('en','sort')" style="width:150px;"> 
 													</td> 
 												</tr>
-												
+												<tr>
+													<td>經濟部RSS介接圖片 格式</td>
+													<td>
+															<input type="radio" name="image_type_en"   value="0"  ${ pagesNewsOne.image_type_en == "0" ? 'checked="checked"' : '' } /> 預設
+															<input type="radio" name="image_type_en"   value="1"  ${ pagesNewsOne.image_type_en == "1" ? 'checked="checked"' : '' }/> 上傳
+													</td> 
+												</tr>
 										<c:choose>
 											<c:when test="${title.type eq 'new_ann'}">
-												<tr>
+												<tr id="rss_image_en_td"  ${ pagesNewsOne.image_type_en == "1" ? 'style="display: none;"' : '' }>
 													<td>經濟部RSS介接圖片</td>
 													<td>
 													<label>
@@ -359,6 +491,18 @@
 													</td> 
 												</tr>
 												
+												<tr id="photo_en_td"  ${ pagesNewsOne.image_type_en == "0" ? 'style="display: none;"' : '' }>
+													<td>圖檔上傳</td>
+													<td>
+														<input type="file" id="photo_en" name="photo_en" style="height:auto;" accept="image/*" class="form-control"></td>
+												</tr>
+				
+												<tr id="photo_review_en_td"  ${ pagesNewsOne.image_type_en == "0" ? 'style="display: none;"' : '' }>
+													<td>圖片預覽</td>
+													<td>
+														<img id="photo_review_en" width="120" src=" ${pagesNewsOne.photo_review_en}"/>
+													</td>
+												</tr>
 												<tr>
 													<td>介接圖片英文說明<br/>(請使用半形文字)</td>
 													<td>
@@ -366,16 +510,18 @@
 														<input type="button" value="同標題文字" onclick="$('input[name=rss_text]').val($('input[name=en_title]').val())">
 													</td>
 												</tr>
+												
 											</c:when>
 										</c:choose>
 				
 												<tr>
 													<td colspan="2" style="padding-left:45%;">
+														<input type="hidden" name="photo_en_temp" value="${pagesNewsOne.photo_en}" >
 														<input type="hidden" name="type" value="${pagesNewsOne.type}" >
 														<input type="hidden" name="doThing" value="${pagesNewsOne.doThing}_en" >
 														<input type="hidden" name="id" value="${pagesNewsOne.id}" >
 														<input type="button" value="送出" class="form-control btn btn-primary"
-															onclick="submitContent(this.form, 'pagesNews_basic')" style="width: 100px;">
+															onclick="submitContent(this.form, 'pagesNews_basic', '${pagesNewsOne.doThing}_en')" style="width: 100px;">
 														<span class="spanNote" style="color:red;">（點擊送出鈕後，下方開啟檔案上傳介面）</span></td>
 												</tr>
 											</tbody>
