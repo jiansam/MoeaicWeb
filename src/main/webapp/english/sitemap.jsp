@@ -50,7 +50,7 @@
 						<span style="color: rgb(255, 64, 0);"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
 						<a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="1. About Us">1. About Us</a>
 						<ul>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="1-1. The MOEAIC">1-1. The MOEAIC</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="1-1. The MOEAIC">1-1. The Department of Investment Review, MOEA</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=en" title="1-2. Organization">1-2. Organization</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=en" title="1-3. Policies">1-3. Policies</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atImPn&lang=en" title="1-4. Implementation Plan">1-4. Implementation Plan</a></li>

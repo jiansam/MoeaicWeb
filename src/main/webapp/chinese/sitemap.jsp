@@ -47,10 +47,10 @@
 						<span style="color: rgb(255, 64, 0);"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
 						<a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch" title="1. 關於本會">1. 關於本會</a>
 						<ul>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch" title="1-1. 認識本會">1-1. 認識本會</a></li>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atMr&lang=ch" title="1-2. 認識首長">1-2. 認識首長</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch" title="1-1. 認識本司">1-1. 認識本司</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atMr&lang=ch" title="1-2. 認識司長">1-2. 認識司長</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=ch" title="1-3. 組織與職掌">1-3. 組織與職掌</a></li>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=ch" title="1-4. 本會政策">1-4. 本會政策</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=ch" title="1-4. 本司政策">1-4. 本司政策</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atImPn&lang=ch" title="1-5. 施政計畫">1-5. 施政計畫</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atTc&lang=ch" title="1-6. 交通位置">1-6. 交通位置</a></li>
 						</ul>
@@ -100,7 +100,7 @@
 						<a href="${pageContext.request.contextPath}/openData.view" title="5. 政府資訊公開">5. 政府資訊公開</a>
 						<ul>
 							<li><a href="${pageContext.request.contextPath}/openData.view#op34" title="5-1. 法規及行政規則">5-1. 法規及行政規則</a></li>
-							<li><a href="${pageContext.request.contextPath}/openData.view#op17" title="5-2. 本會組織、職掌及聯絡方式">5-2. 本會組織、職掌及聯絡方式</a></li>
+							<li><a href="${pageContext.request.contextPath}/openData.view#op17" title="5-2. 本司組織、職掌及聯絡方式">5-2. 本司組織、職掌及聯絡方式</a></li>
 							<li><a href="${pageContext.request.contextPath}/openData.view#op19" title="5-3. 行政指導有關文書">5-3. 行政指導有關文書</a></li>
 							<li><a href="${pageContext.request.contextPath}/openData.view#op18" title="5-4. 施政計畫">5-4. 施政計畫</a></li>
 							<li><a href="${pageContext.request.contextPath}/openData.view#op132" title="5-5. 出版品資訊">5-5. 出版品資訊</a></li>							

@@ -38,7 +38,7 @@
                              <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_menager">認識首長</a>
                          </li>
                          <li>
-                             <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_organization">組織與執掌</a>
+                             <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_organization">組織與職掌</a>
                          </li>
                          <li>
                              <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_policy">本會政策</a>

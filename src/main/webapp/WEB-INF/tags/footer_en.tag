@@ -9,7 +9,7 @@
 					<dt>About Us</dt>
 					<dd>
 						<ul>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="The MOEAIC">The MOEAIC</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="The Department of Investment Review, MOEA">The Department of Investment Review, MOEA</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=en" title="Organization">Organization</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=en" title="Policies">Policies</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atImPn&lang=en" title="Implementation Plan">Implementation Plan</a></li>

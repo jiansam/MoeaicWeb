@@ -39,10 +39,10 @@ public class FrontPagesServlet extends HttpServlet
 		type_map.put("ctAy", "contact_apply");
 		
 		title_map_ch = new HashMap<>();
-		title_map_ch.put("atIo", "認識本會");
-		title_map_ch.put("atMr", "認識首長");
-		title_map_ch.put("atOn", "組織與執掌");
-		title_map_ch.put("atPy", "本會政策");
+		title_map_ch.put("atIo", "認識本司");
+		title_map_ch.put("atMr", "認識司長");
+		title_map_ch.put("atOn", "組織與職掌");
+		title_map_ch.put("atPy", "本司政策");
 		title_map_ch.put("atImPn", "施政計畫");
 		title_map_ch.put("atTc", "交通位置");
 		title_map_ch.put("pvay", "隱私權及安全政策");
@@ -50,7 +50,7 @@ public class FrontPagesServlet extends HttpServlet
 		title_map_ch.put("ctAy", "陳情管道");
 		
 		title_map_en = new HashMap<>();
-		title_map_en.put("atIo", "The MOEAIC");
+		title_map_en.put("atIo", "The Department of Investment Review, MOEA");
 		title_map_en.put("atOn", "Organization");
 		title_map_en.put("atPy", "Policies");
 		title_map_en.put("atImPn", "Implementation Plan");

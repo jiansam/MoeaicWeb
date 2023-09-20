@@ -7,7 +7,7 @@
 	<ul>
 		<c:forEach var="parent" items="${linkTitle}">
 		<li><a href="${pageContext.request.contextPath}/links.view?do=${parent.id}&lang=en" title="${parent.en_title}">
-		<span style="color:#FF4000;"><i class="fa fa-caret-right" aria-hidden="true"></i></span> ${parent.en_title}</a></li>
+		<span style="color:#FF4000;"><i class="fa fa-caret-right" aria-hidden="true"></i></span>${parent.en_title}</a></li>
 		</c:forEach>
 	</ul>
 </div>
