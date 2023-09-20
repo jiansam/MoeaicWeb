@@ -10,7 +10,7 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="#">經濟部投資審議委員會 - 後台管理</a>
+         <a class="navbar-brand" href="#">經濟部投資審議司 - 後台管理</a>
      </div>
      <!-- /.navbar-header -->
 
@@ -29,19 +29,19 @@
          <div class="sidebar-nav navbar-collapse">
              <ul class="nav" id="side-menu">
                  <li>
-                     <a href="#"><i class="fa fa-dashboard fa-fw"></i> 關於本會<span class="fa arrow"></span></a>
+                     <a href="#"><i class="fa fa-dashboard fa-fw"></i> 關於本司<span class="fa arrow"></span></a>
                      <ul class="nav nav-second-level">
                          <li>
-                             <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_intro">認識本會</a>
+                             <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_intro">認識本司</a>
                          </li>
                          <li>
-                             <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_menager">認識首長</a>
+                             <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_menager">認識召集人及司長</a>
                          </li>
                          <li>
                              <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_organization">組織與職掌</a>
                          </li>
                          <li>
-                             <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_policy">本會政策</a>
+                             <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_policy">本司政策</a>
                          </li>
                          <li>
                              <a href="${pageContext.request.contextPath}/console/edit-pages.view?doThing=pagesIndex&type=about_imple_plan">施政計畫</a>

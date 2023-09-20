@@ -21,8 +21,8 @@
 	<div class="container" style="position: relative;">
 		<div id="divLogo">
 			<h1 style="margin: 0;">
-			<a href="${pageContext.request.contextPath}/chinese/index.jsp" style="display: block;" title="經濟部投資審議委員會"> 
-				<img src="${pageContext.request.contextPath}/images/logo_MOEA.png" alt="經濟部投資審議委員會" class="ImgLogo">
+			<a href="${pageContext.request.contextPath}/chinese/index.jsp" style="display: block;" title="經濟部投資審議司"> 
+				<img src="${pageContext.request.contextPath}/images/moeadir_logo.png" alt="經濟部投資審議司" class="ImgLogo">
 			</a>
 			</h1>
 		</div>
@@ -31,11 +31,11 @@
 			<div id="divTopMenu">
 				<a id="U" href="#U" accesskey="U" class="sr-only u-focusable" style="line-height:30px;" title="上方選單">:::</a>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="${pageContext.request.contextPath}/chinese/index.jsp" title="回到首頁"><img src="${pageContext.request.contextPath}/images/回到首頁.png" width="15" height="13" alt="回到首頁" />&nbsp;回到首頁</a></li>
-					<li><a href="${pageContext.request.contextPath}/english/index.jsp" title="English"><img src="${pageContext.request.contextPath}/images/英文版.png" width="14" height="14" alt="English" />&nbsp;English</a></li>
-					<li><a href="${pageContext.request.contextPath}/chinese/FAQ.jsp" title="常見問答"><img src="${pageContext.request.contextPath}/images/QA.png" width="15" height="17" alt="常見問答" />&nbsp;常見問答</a></li>  <!--2023年新增-->
-					<li><a href="${pageContext.request.contextPath}/about.view?type=ctIf&lang=CH" title="聯絡我們"><img src="${pageContext.request.contextPath}/images/聯絡我們.png" width="14" height="11" alt="聯絡我們" />&nbsp;聯絡我們</a></li>
-					<li><a href="${pageContext.request.contextPath}/chinese/sitemap.jsp" title="網站導覽"><img src="${pageContext.request.contextPath}/images/網站導覽.png" width="13" height="14" alt="網站導覽" />&nbsp;網站導覽</a></li>
+					<li><a href="${pageContext.request.contextPath}/chinese/index.jsp" title="回到首頁">回到首頁</a></li>
+					<li>｜<a href="${pageContext.request.contextPath}/english/index.jsp" title="English">English</a></li>
+					<li>｜<a href="${pageContext.request.contextPath}/chinese/FAQ.jsp" title="常見問答">常見問答</a></li>  <!--2023年新增-->
+					<li>｜<a href="${pageContext.request.contextPath}/about.view?type=ctIf&lang=CH" title="聯絡我們">聯絡我們</a></li>
+					<li>｜<a href="${pageContext.request.contextPath}/chinese/sitemap.jsp" title="網站導覽">網站導覽</a></li>
 				</ul>
 			</div>
 		</div>
@@ -58,10 +58,10 @@
 				<ul class="nav navbar-nav" style="width: 100%">
 					<li class="dropdown TopNav">
 						<a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch"
-							class="dropdown-toggle <%= "about".equalsIgnoreCase(selected) ? "selectedCategory" : "" %>" data-toggle="dropdown" role="button" aria-expanded="false" title="關於本會">關於本會</a>
+							class="dropdown-toggle <%= "about".equalsIgnoreCase(selected) ? "selectedCategory" : "" %>" data-toggle="dropdown" role="button" aria-expanded="false" title="關於本司">關於本司</a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch" title="認識本司">認識本司</a></li>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atMr&lang=ch" title="認識司長">認識司長</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atMr&lang=ch" title="認識召集人及司長">認識召集人及司長</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=ch" title="組織與職掌">組織與職掌</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=ch" title="本司政策">本司政策</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atImPn&lang=ch" title="施政計畫">施政計畫</a></li>

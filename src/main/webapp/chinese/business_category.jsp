@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
 
 <head>
-	<title>業務統計圖表 - 焦點消息 - 經濟部投資審議委員會(INVESTMENT COMMISSION, MOEA)</title>
+	<title>業務統計圖表 - 焦點消息 - 經濟部投資審議司(INVESTMENT COMMISSION, MOEA)</title>
 	<moeaic:libraries />
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript">

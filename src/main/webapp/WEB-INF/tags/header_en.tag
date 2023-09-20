@@ -23,7 +23,7 @@
 		<div id="divLogo">
 			<h1 style="margin: 0;">
 			<a href="${pageContext.request.contextPath}/english/index.jsp" style="display: block;"> 
-				<img src="${pageContext.request.contextPath}/images/logo_MOEA_en.png" alt="Investment Commission, MOEA" title="Investment Commission, MOEA" class="ImgLogo">
+				<img src="${pageContext.request.contextPath}/images/moeadir_logo.png" alt="Investment Commission, MOEA" title="Investment Commission, MOEA" class="ImgLogo">
 			</a>
 			</h1>
 		</div>
@@ -32,10 +32,10 @@
 			<div id="divTopMenu">
 				<a id="U" href="#U" accesskey="U" class="sr-only u-focusable" style="line-height:30px;" title="Main Menu">:::</a>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="${pageContext.request.contextPath}/english/index.jsp" title="Home"><img src="${pageContext.request.contextPath}/images/回到首頁.png" width="15" height="13" alt="" />&nbsp;Home</a></li>
-					<li><a href="${pageContext.request.contextPath}/chinese/index.jsp" title="Chinese"><img src="${pageContext.request.contextPath}/images/中文版.png" width="14" height="14" alt="" />&nbsp;正體中文</a></li>
-					<li><a href="${pageContext.request.contextPath}/english/FAQ_EN.jsp" title="FAQs"><img src="${pageContext.request.contextPath}/images/QA.png" width="15" height="17" alt="FAQs" />&nbsp;FAQs</a></li>  <!--2023年新增-->
-					<li><a href="${pageContext.request.contextPath}/english/sitemap.jsp" title="Sitemap"><img src="${pageContext.request.contextPath}/images/網站導覽.png" width="13" height="14" alt="" />&nbsp;Sitemap</a></li>
+					<li><a href="${pageContext.request.contextPath}/english/index.jsp" title="Home">Home</a></li>
+					<li>｜<a href="${pageContext.request.contextPath}/chinese/index.jsp" title="Chinese">正體中文</a></li>
+					<li>｜<a href="${pageContext.request.contextPath}/english/FAQ_EN.jsp" title="FAQs">FAQs</a></li>  <!--2023年新增-->
+					<li>｜<a href="${pageContext.request.contextPath}/english/sitemap.jsp" title="Sitemap">Sitemap</a></li>
 				</ul>
 			</div>
 		</div>
@@ -60,7 +60,7 @@
 						<a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en"
 							class="dropdown-toggle <%= "about".equalsIgnoreCase(selected) ? "selectedCategory" : "" %> " data-toggle="dropdown" role="button" aria-expanded="false" title="About Us">About Us</a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="The Department of Investment Review, MOEA">The Department of Investment Review, MOEA</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="Dept. of Investment Review, MOEA">Dept. of Investment Review, MOEA</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=en" title="Organization">Organization</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=en" title="Policies">Policies</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atImPn&lang=en" title="Implementation Plan">Implementation Plan</a></li>

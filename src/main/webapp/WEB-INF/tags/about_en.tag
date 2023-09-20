@@ -3,8 +3,8 @@
 	<a id="L" href="#L" accesskey="L" class="sr-only u-focusable" style="float:left;line-height:40px;" title="Left menu">:::</a>
 	<div id="menuTitle" style="letter-spacing:0px;">About Us</div>
 	<ul>
-		<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="The Department of Investment Review, MOEA">
-		<span style="color:#FF4000;"><i class="fa fa-caret-right" aria-hidden="true"></i></span> The Department of Investment Review, MOEA</a></li>
+		<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="Dept. of Investment Review, MOEA">
+		<span style="color:#FF4000;"><i class="fa fa-caret-right" aria-hidden="true"></i></span> Dept. of Investment Review, MOEA</a></li>
 		<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=en" title="Organization">
 		<span style="color:#FF4000;"><i class="fa fa-caret-right" aria-hidden="true"></i></span> Organization</a></li>
 		<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=en" title="Policies">

@@ -35,7 +35,7 @@
 		});
 	});
 </script>
-<title>經濟部投資審議委員會</title>
+<title>經濟部投資審議司</title>
 </head>
 
 <body>

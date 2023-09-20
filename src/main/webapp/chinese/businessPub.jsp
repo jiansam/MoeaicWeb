@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
 
 <head>
-	<title>${title_ch} - 申辦業務 - 經濟部投資審議委員會(INVESTMENT COMMISSION, MOEA)</title>
+	<title>${title_ch} - 申辦業務 - 經濟部投資審議司(INVESTMENT COMMISSION, MOEA)</title>
 	
 	<moeaic:libraries />
 	<script type="text/javascript">

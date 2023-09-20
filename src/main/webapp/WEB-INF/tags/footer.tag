@@ -7,11 +7,11 @@
 		<div id="divFatFooterTool">
 			<div class="cell">
 				<dl>
-					<dt>關於本會</dt>
+					<dt>關於本司</dt>
 					<dd>
 						<ul>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch" title="認識本司">認識本司</a></li>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atMr&lang=ch" title="認識司長">認識司長</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atMr&lang=ch" title="認識召集人及司長">認識召集人及司長</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=ch" title="組織與職掌">組織與職掌</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=ch" title="本司政策">本司政策</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atImPn&lang=ch" title="施政計畫">施政計畫</a></li>
@@ -73,10 +73,10 @@
 <div id="divPageBottom">
 	<div class="container">
 		<div class="information">
-			<span style="white-space: nowrap;">服務信箱：<a href="#" style="color:white;text-decoration:underline;" target="_black" title="服務信箱：icserve@moeaic.gov.tw">icserve@moeaic.gov.tw</a></span>&nbsp;&nbsp; 
+			<span style="white-space: nowrap;">服務信箱：<a href="#" style="color:white;text-decoration:underline;" target="_black" title="服務信箱：icserve@moea.gov.tw">icserve@moea.gov.tw</a></span>&nbsp;&nbsp; 
 			<span>地址：100215 台北市中正區羅斯福路1段7號8樓</span>&nbsp;&nbsp; 
 			<span style="white-space: nowrap;">電話：02-3343-5700</span> <br /> 
-			<span>2016 © 版權所有 經濟部投資審議委員會</span><br>
+			<span>2016 © 版權所有 經濟部投資審議司</span><br>
 			<span>建議使用 IE 10/Firefox 30/Chrome 27，最佳瀏覽解析度為1024x768 以上</span> 
 			<span style="white-space: nowrap;">｜ <a href="${pageContext.request.contextPath}/about.view?type=pvay&lang=CH" style="color:white;text-decoration:underline;" title="隱私權及安全政策">隱私權及安全政策</a></span>
 		</div>

@@ -15,7 +15,7 @@
 </style>
 <head>
 <moeaic:libraries />
-<title>網站導覽 - 經濟部投資審議委員會(INVESTMENT COMMISSION, MOEA)</title>
+<title>網站導覽 - 經濟部投資審議司(INVESTMENT COMMISSION, MOEA)</title>
 </head>
 
 <body>
@@ -45,10 +45,10 @@
 				<ul style="width: 100%;font-size:18px;" class="sitemap_ul">
 					<li>
 						<span style="color: rgb(255, 64, 0);"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
-						<a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch" title="1. 關於本會">1. 關於本會</a>
+						<a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch" title="1. 關於本司">1. 關於本司</a>
 						<ul>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=ch" title="1-1. 認識本司">1-1. 認識本司</a></li>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atMr&lang=ch" title="1-2. 認識司長">1-2. 認識司長</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atMr&lang=ch" title="1-2. 認識召集人及司長">1-2. 認識召集人及司長</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=ch" title="1-3. 組織與職掌">1-3. 組織與職掌</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=ch" title="1-4. 本司政策">1-4. 本司政策</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atImPn&lang=ch" title="1-5. 施政計畫">1-5. 施政計畫</a></li>

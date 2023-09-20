@@ -9,7 +9,7 @@
 					<dt>About Us</dt>
 					<dd>
 						<ul>
-							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="The Department of Investment Review, MOEA">The Department of Investment Review, MOEA</a></li>
+							<li><a href="${pageContext.request.contextPath}/about.view?type=atIo&lang=en" title="Dept. of Investment Review, MOEA">Dept. of Investment Review, MOEA</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atOn&lang=en" title="Organization">Organization</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atPy&lang=en" title="Policies">Policies</a></li>
 							<li><a href="${pageContext.request.contextPath}/about.view?type=atImPn&lang=en" title="Implementation Plan">Implementation Plan</a></li>
@@ -57,9 +57,9 @@
 	<div class="container">
 		<div class="information">
 			<span>8F., No.7, Sec. 1, Roosevelt Rd., Jhongjheng District, Taipei City 100215, Taiwan (R.O.C.)</span> <br /> 
-			<span>Service E-mail：<a href="#" style="color:white;text-decoration:underline;" target="_black" title="Service E-mail:icserve@moeaic.gov.tw">icserve@moeaic.gov.tw</a></span>&nbsp;&nbsp;
-			<span>Tel：+886-2-3343-5700</span>&nbsp;&nbsp;
-			<span>Copyright © 2016 Investment Commission, MOEA</span> <br /> 
+			<span>Service E-mail：<a href="#" style="color:white;text-decoration:underline;" target="_black" title="Service E-mail:icserve@moea.gov.tw">icserve@moea.gov.tw</a></span>&nbsp;&nbsp;
+			<span>Tel：+886-2-3343-5700</span>&nbsp;&nbsp;<br>
+			<span>Copyright © 2016 Department of Investment Review, Ministry of Economic Affairs, R.O.C.</span> <br /> 
 			<span>Best viewed with IE 10/Firefox 30/Chrome 27 or higher with 1024 x 768 resolution</span>
 		</div>
 		<div class="information_logo">

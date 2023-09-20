@@ -95,12 +95,13 @@ a:hover {
 
 /* 頂部區塊 */
 .ImgLogo {
-	/*width: 206px;*/
+	max-width:90%;
+	width: 500px;
 	padding-bottom: 10px;
 }
 
 #divHeader {
-    background-color: #00b9b1;
+    /*background-color: #00b9b1;*/
     margin-bottom: -5px;
 	vertical-align:bottom;
 	padding-top:40px;
@@ -108,19 +109,22 @@ a:hover {
 }
 
 #divSearch {
-    position: absolute;
-    right: 0;
     text-align: right;
     float: right;
 	bottom:0px;
 	width:100%;
+}
+@media screen and (min-width: 992px){
+	#divSearch {
+		position: absolute;
+		right: 0;
+	}
 }
 #divTopMenu{
 	font-size:15px;
 	vertical-align:center;
 }
 #divTopMenu .nav > li > a {
-	color:white;
 	padding: 5px;
 }
 .navbar-right {
@@ -130,7 +134,7 @@ a:hover {
 #divTopMenu .nav > li > a:hover,
 #divTopMenu .nav > li > a:focus {
     color: #FFFD00;
-	background-color: #027A75;
+	background-color: #045091;
 }
 /* 中心選單 */
 #divMenu {
