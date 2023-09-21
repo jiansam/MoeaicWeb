@@ -23,7 +23,7 @@
 		<div id="divLogo">
 			<h1 style="margin: 0;">
 			<a href="${pageContext.request.contextPath}/english/index.jsp" style="display: block;"> 
-				<img src="${pageContext.request.contextPath}/images/moeadir_logo.png" alt="Investment Commission, MOEA" title="Investment Commission, MOEA" class="ImgLogo">
+				<img src="${pageContext.request.contextPath}/images/moeadir_logo.png" alt="Department of Investment Review, MOEA" title="Department of Investment Review, MOEA" class="ImgLogo">
 			</a>
 			</h1>
 		</div>

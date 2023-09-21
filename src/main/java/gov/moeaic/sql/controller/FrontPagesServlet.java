@@ -40,7 +40,7 @@ public class FrontPagesServlet extends HttpServlet
 		
 		title_map_ch = new HashMap<>();
 		title_map_ch.put("atIo", "認識本司");
-		title_map_ch.put("atMr", "認識司長");
+		title_map_ch.put("atMr", "認識召集人及司長");
 		title_map_ch.put("atOn", "組織與職掌");
 		title_map_ch.put("atPy", "本司政策");
 		title_map_ch.put("atImPn", "施政計畫");
@@ -50,7 +50,7 @@ public class FrontPagesServlet extends HttpServlet
 		title_map_ch.put("ctAy", "陳情管道");
 		
 		title_map_en = new HashMap<>();
-		title_map_en.put("atIo", "The Department of Investment Review, MOEA");
+		title_map_en.put("atIo", "Dept. of Investment Review, MOEA");
 		title_map_en.put("atOn", "Organization");
 		title_map_en.put("atPy", "Policies");
 		title_map_en.put("atImPn", "Implementation Plan");

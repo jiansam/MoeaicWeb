@@ -50,7 +50,7 @@ public class PagesServlet extends HttpServlet
 	{
 		pagesNews_title = new HashMap<>();
 		pagesNews_title.put("about_intro", "認識本司");
-		pagesNews_title.put("about_menager", "認識司長");
+		pagesNews_title.put("about_menager", "認識召集人及司長");
 		pagesNews_title.put("about_organization", "組織與職掌");
 		pagesNews_title.put("about_policy", "本司政策");
 		pagesNews_title.put("about_implementation_plan", "施政計畫");

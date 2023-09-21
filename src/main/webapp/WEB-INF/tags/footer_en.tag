@@ -60,7 +60,7 @@
 			<span>Service E-mail：<a href="#" style="color:white;text-decoration:underline;" target="_black" title="Service E-mail:icserve@moea.gov.tw">icserve@moea.gov.tw</a></span>&nbsp;&nbsp;
 			<span>Tel：+886-2-3343-5700</span>&nbsp;&nbsp;<br>
 			<span>Copyright © 2016 Department of Investment Review, Ministry of Economic Affairs, R.O.C.</span> <br /> 
-			<span>Best viewed with IE 10/Firefox 30/Chrome 27 or higher with 1024 x 768 resolution</span>
+			<span>Best viewed with Microsoft Edge/Firefox 30/Chrome 27 or higher with 1024 x 768 resolution</span>
 		</div>
 		<div class="information_logo">
 			<div class="information_image">

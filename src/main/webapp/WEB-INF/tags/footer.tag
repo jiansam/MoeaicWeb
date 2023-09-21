@@ -77,7 +77,7 @@
 			<span>地址：100215 台北市中正區羅斯福路1段7號8樓</span>&nbsp;&nbsp; 
 			<span style="white-space: nowrap;">電話：02-3343-5700</span> <br /> 
 			<span>2016 © 版權所有 經濟部投資審議司</span><br>
-			<span>建議使用 IE 10/Firefox 30/Chrome 27，最佳瀏覽解析度為1024x768 以上</span> 
+			<span>建議使用 Microsoft Edge/Firefox 30/Chrome 27，最佳瀏覽解析度為1024x768 以上</span> 
 			<span style="white-space: nowrap;">｜ <a href="${pageContext.request.contextPath}/about.view?type=pvay&lang=CH" style="color:white;text-decoration:underline;" title="隱私權及安全政策">隱私權及安全政策</a></span>
 		</div>
 		<div class="information_logo">
