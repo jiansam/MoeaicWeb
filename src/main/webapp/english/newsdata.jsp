@@ -6,7 +6,7 @@
 
 <head>
 	<moeaic:libraries_en />
-	<title>INVESTMENT COMMISSION, MOEA - ${title_en}</title>
+	<title>Department of Investment Review, MOEA - ${title_en}</title>
 	<style>
 		#con .mimg img{
 			width:100%;

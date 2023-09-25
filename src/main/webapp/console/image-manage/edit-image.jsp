@@ -7,7 +7,7 @@
 <html>
 <head>
 	<console:libraries />
-	<title>經濟部投資審議委員會 - 後台管理</title>
+	<title>經濟部投資審議司 - 後台管理</title>
 	
 	<link href="${pageContext.request.contextPath}/jquery-loadmask-0.4/jquery.loadmask.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="${pageContext.request.contextPath}/jquery-loadmask-0.4/jquery.loadmask.js"></script>

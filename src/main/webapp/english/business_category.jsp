@@ -8,7 +8,7 @@
 
 <head>
 	<moeaic:libraries_en />
-	<title>INVESTMENT COMMISSION, MOEA - Statistics Chart</title>
+	<title>Department of Investment Review, MOEA - Statistics Chart</title>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript">
 		google.charts.load('current', {packages : [ 'corechart', 'controls']});

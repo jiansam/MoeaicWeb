@@ -6,7 +6,7 @@
 
 <head>
 	<moeaic:libraries_en />
-	<title>INVESTMENT COMMISSION, MOEA - Latest News</title>
+	<title>Department of Investment Review, MOEA - Latest News</title>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {

@@ -15,7 +15,7 @@
 </style>
 <head>
 <moeaic:libraries_en />
-<title>INVESTMENT COMMISSION, MOEA - SiteMap</title>
+<title>Department of Investment Review, MOEA - SiteMap</title>
 </head>
 
 <body>

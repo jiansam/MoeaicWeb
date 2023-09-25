@@ -94,11 +94,11 @@ public class NewsRSSServlet extends HttpServlet{
 			
 			// 子目錄：channel
 			Element channel = new Element("channel");
-			channel.addContent(new Element("title").setText("zh-tw".equals(lang) ? "經濟部投資審議委員會-最新消息" : "INVESTMENT COMMISSION, MOEA - Latest News"))
+			channel.addContent(new Element("title").setText("zh-tw".equals(lang) ? "經濟部投資審議司-最新消息" : "Department of Investment Review, MOEA - Latest News"))
 				.addContent(new Element("link").setText(request.getRequestURL().toString())) //http://localhost:8080/rss-news.xml
-				.addContent(new Element("description").setText("zh-tw".equals(lang) ? "經濟部投資審議委員會-最新消息" : "INVESTMENT COMMISSION, MOEA")) //經濟部投資審議委員會-最新消息RSS頻道
+				.addContent(new Element("description").setText("zh-tw".equals(lang) ? "經濟部投資審議司-最新消息" : "Department of Investment Review, MOEA")) //經濟部投資審議司-最新消息RSS頻道
 				.addContent(new Element("language").setText(lang))
-				.addContent(new Element("copyright").setText("zh-tw".equals(lang) ? "2016 © 版權所有 經濟部投資審議委員會 " : "Copyright © 2016 Investment Commission, MOEA"))
+				.addContent(new Element("copyright").setText("zh-tw".equals(lang) ? "2016 © 版權所有 經濟部投資審議司 " : "Copyright © 2016 Investment Commission, MOEA"))
 				.addContent(new Element("lastBuildDate").setText(getGMT(new Date())))
 				.addContent(new Element("ttl").setText("20"));
 			root.addContent(channel);
@@ -120,7 +120,7 @@ public class NewsRSSServlet extends HttpServlet{
 				
 				
 				Element item = new Element("item")
-						.addContent(new Element("title").setContent(new CDATA(title))) //<![CDATA[ 經濟部投資審議委員會第1141次委員會議新聞稿 ]]>
+						.addContent(new Element("title").setContent(new CDATA(title))) //<![CDATA[ 經濟部投資審議司第1141次委員會議新聞稿 ]]>
 						.addContent(new Element("link").setText(
 								urlPath + "/news.view?id=" + bean.getId() + "&lang=" + lang2 + "&type=new_ann&do=data") )
 						.addContent(new Element("description").setContent(new CDATA(content.replaceAll("<br>", "\n").replaceAll("<br/>", "\n").replaceAll("<p>", "").replaceAll("</p>", "").replaceAll("\\<.*?\\>", ""))))
@@ -148,7 +148,7 @@ public class NewsRSSServlet extends HttpServlet{
 						.addContent(new Element("date" , dc).setText(getGMT(bean.getPublish_date())))
 						.addContent(new Element("identifier" , dc).setText(author))
 						.addContent(new Element("relation" , dc).setText(""))
-						.addContent(new Element("rights" , dc).setText("zh-tw".equals(lang) ? "2016 © 版權所有 經濟部投資審議委員會 " : "Copyright © 2016 Investment Commission, MOEA"))
+						.addContent(new Element("rights" , dc).setText("zh-tw".equals(lang) ? "2016 © 版權所有 經濟部投資審議司 " : "Copyright © 2016 Investment Commission, MOEA"))
 						.addContent(new Element("category.theme").setText("950"))
 						.addContent(new Element("category.cake").setText("2B6"))
 						.addContent(new Element("category.service").setText("I41"))

@@ -6,7 +6,7 @@
 <html>
 <head>
 	<console:libraries />
-	<title>經濟部投資審議委員會 - 後台管理</title>
+	<title>經濟部投資審議司 - 後台管理</title>
 	<script type="text/javascript">
 		var pagesURL = "${pageContext.request.contextPath}/console/edit-pages.view";
 		var contextPath = "${pageContext.request.contextPath}";

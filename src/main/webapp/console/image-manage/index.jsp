@@ -6,7 +6,7 @@
 <html>
 <head>
 	<console:libraries />
-	<title>經濟部投資審議委員會 - 後台管理</title>
+	<title>經濟部投資審議司 - 後台管理</title>
 	<script>
     $(document).ready(function() {
         $('#images-table').DataTable({

@@ -9,7 +9,7 @@
 		var pagesURL = "${pageContext.request.contextPath}/console/edit-pages.view";
 	</script>
 	<script src="${pageContext.request.contextPath}/js/console/edit-options.js"></script>
-	<title>經濟部投資審議委員會 - 後台管理</title>
+	<title>經濟部投資審議司 - 後台管理</title>
 </head>
 <body>
 <div id="wrapper">

@@ -17,7 +17,7 @@
 		
 	</script>
 	
-	<title>經濟部投資審議委員會 - 點擊率管理</title>
+	<title>經濟部投資審議司 - 點擊率管理</title>
 </head>
 <body>
 	<div id="wrapper">

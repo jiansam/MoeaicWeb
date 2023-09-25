@@ -26,7 +26,7 @@
 		}			
 	</script>
 	
-	<title>經濟部投資審議委員會 - 手動定義log起始日</title>
+	<title>經濟部投資審議司 - 手動定義log起始日</title>
 </head>
 <body>
 	<div id="wrapper">

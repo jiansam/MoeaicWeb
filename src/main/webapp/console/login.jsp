@@ -14,7 +14,7 @@
 	<META HTTP-EQUIV="EXPIRES" CONTENT="0">
 	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 <%-- 	<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" /> --%>
-	<title>經濟部投資審議委員會 - 後台管理</title>
+	<title>經濟部投資審議司 - 後台管理</title>
 	<style type="text/css">
 		#login_page{
 			background-image: url(../images/console/consoleBG.png);

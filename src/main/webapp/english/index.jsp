@@ -37,7 +37,7 @@ $(document).ready(function(){
 	});
 });
 </script>
-<title>INVESTMENT COMMISSION, MOEA</title>
+<title>Department of Investment Review, MOEA</title>
 </head>
 
 <body>

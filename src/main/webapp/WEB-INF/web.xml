@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <web-app version="2.4">
-	<display-name>經濟部投資審議委員會官方網站</display-name>
-	<description>經濟部投資審議委員會官方網站</description>
+	<display-name>經濟部投資審議司官方網站</display-name>
+	<description>經濟部投資審議司官方網站</description>
 
 	<jsp-config>
 		<jsp-property-group>

@@ -7,7 +7,7 @@
 <head>
 	       
 	<console:libraries />
-	<title>經濟部投資審議委員會 - 後台管理</title>
+	<title>經濟部投資審議司 - 後台管理</title>
 	<script type="text/javascript">
 		var now = new Date();
 		var month = now.getMonth()+1;
