@@ -6,7 +6,7 @@
 
 <head>
 	<moeaic:libraries_en />
-	<title>INVESTMENT COMMISSION, MOEA - Statistics</title>
+	<title>Department of Investment Review, MOEA - Statistics</title>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {

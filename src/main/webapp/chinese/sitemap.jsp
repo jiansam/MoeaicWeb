@@ -15,7 +15,7 @@
 </style>
 <head>
 <moeaic:libraries />
-<title>網站導覽 - 經濟部投資審議司(INVESTMENT COMMISSION, MOEA)</title>
+<title>網站導覽 - 經濟部投資審議司(Department of Investment Review, MOEA)</title>
 </head>
 
 <body>

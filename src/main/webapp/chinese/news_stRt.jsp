@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
 
 <head>
-	<title>研究報告 - 焦點消息 - 經濟部投資審議司(INVESTMENT COMMISSION, MOEA)</title>
+	<title>研究報告 - 焦點消息 - 經濟部投資審議司(Department of Investment Review, MOEA)</title>
 	<moeaic:libraries />
 	
 	<script type="text/javascript">

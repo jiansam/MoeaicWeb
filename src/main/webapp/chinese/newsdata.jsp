@@ -6,7 +6,7 @@
 
 <head>
 	<moeaic:libraries />
-	<title>${title_ch} - 申辦業務 - 經濟部投資審議司(INVESTMENT COMMISSION, MOEA)</title>
+	<title>${title_ch} - 申辦業務 - 經濟部投資審議司(Department of Investment Review, MOEA)</title>
 	<style type="text/css">
 		#con br {line-height: 200%; }
 		
