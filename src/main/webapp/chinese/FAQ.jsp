@@ -46,7 +46,7 @@
 						其他
 						<ul>
 							<li><a href="${pageContext.request.contextPath}/businessPub.view?lang=ch&op_id_one=7&tab=2" title="大陸地區產業技術引進常見問答">大陸地區產業技術引進常見問答</a></li>
-							<li><a href="${pageContext.request.contextPath}//businessPub.view?lang=ch&op_id_one=8&tab=2" title="外籍人士來臺常見問答">外籍人士來臺常見問答</a></li>
+							<li><a href="${pageContext.request.contextPath}/businessPub.view?lang=ch&op_id_one=8&tab=2" title="外籍人士來臺常見問答">外籍人士來臺常見問答</a></li>
 							<li><a href="${pageContext.request.contextPath}/businessPub.view?lang=ch&op_id_one=9&tab=2" title="大陸人士來臺常見問答">大陸人士來臺常見問答</a></li>
 						</ul>
 					</li>
