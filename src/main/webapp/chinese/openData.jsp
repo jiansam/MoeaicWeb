@@ -71,8 +71,8 @@
 		  				<table class="table table-striped table-bordered table-hover" style="font-size:18px;">
 		  					<thead>
 			  					<tr>
-			  						<th style="width:30%;text-align:center;">項目</th>
-			  						<th style="text-align:center;">內容</th>
+			  						<th scope="col" style="width:30%;text-align:center;">項目</th>
+			  						<th scope="col" style="text-align:center;">內容</th>
 			  					</tr>
 		  					</thead>
 	
@@ -80,7 +80,7 @@
 				  				<c:forEach var="map" items="${optionManager.openData_type}">
 				  				<tr>
 				  				
-			  						<th id="op${map.id}" style="text-align:left;">${map.name}</th>
+			  						<th scope="row" id="op${map.id}" style="text-align:left;">${map.name}</th>
 			  						<td style="text-align:left;">
 			  							<c:choose>
 			  							
