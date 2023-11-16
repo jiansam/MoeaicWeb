@@ -56,11 +56,15 @@
 					  				<c:choose>
 									   
 									   <c:when test="${newsOne.image_type_en == '0'}"> 
-											<img alt="${newsOne.rss_text }" src="${pageContext.request.contextPath}${newsOne.rss_image }">	   		
+										   <c:if test="${not empty newsOne.rss_image}">
+												<img alt="${newsOne.rss_text }" src="${pageContext.request.contextPath}${newsOne.rss_image }">
+										   </c:if>	 	   		
 									   </c:when>
 									   
 									   <c:otherwise>
-									   		<img alt="${newsOne.rss_text }" src="${pageContext.request.contextPath}${newsOne.photo_en }">
+										   	<c:if test="${not empty newsOne.photo_en}">
+									   			<img alt="${newsOne.rss_text }" src="${pageContext.request.contextPath}${newsOne.photo_en }">
+									   		</c:if>
 									   </c:otherwise>
 									</c:choose>
 					  			</div>
