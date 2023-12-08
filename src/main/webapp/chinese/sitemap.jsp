@@ -40,6 +40,7 @@
 					　Alt+C：中央內容區塊，為本頁主要內容區。<br>
 					　Alt+L：左方導覽區塊。<br>
 					　Alt+Z：下方選單連結區塊。<br>
+					如果您的瀏覽器是Firefox，快速鍵的使用方法是 Shift+Alt+(快速鍵字母)，例如 Shift+Alt+C會跳至網頁中央區塊，以此類推。<br>
 	        	</div>
 	        	<hr>
 				<ul style="width: 100%;font-size:18px;" class="sitemap_ul">

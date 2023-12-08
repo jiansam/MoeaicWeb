@@ -554,3 +554,10 @@ a:hover {
 		float:right;
 	}	
 }
+
+
+#divHeader a[title="Jump to the main content block"]:focus{
+	color: #000 !important;
+	padding: 10px;
+	font-weight: bold !important;
+}

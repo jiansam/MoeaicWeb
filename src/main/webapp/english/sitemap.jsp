@@ -43,6 +43,7 @@
 				Alt+C: Main content area shows the content of each page.<br>
 				Alt+L: Navigation links on the Left area.<br>
 				Alt+Z: Bottom menu area.<br>
+				If you are using Firefox, the shortcut key method is Shift+Alt+(access key letter), for example, Shift+Alt+C will jump to the central section of the webpage, and so on.<br>
 				</div>
 				<hr>
 				<ul class="sitemap_ul" style="width: 100%;font-size:18px;">

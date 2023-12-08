@@ -568,3 +568,9 @@ a:hover {
 		float:right;
 	}	
 }
+
+#divHeader a[title="跳到主要內容區塊"]:focus{
+	color: #000 !important;
+	padding: 10px;
+	font-weight: bold !important;
+}
