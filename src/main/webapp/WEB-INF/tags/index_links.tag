@@ -19,7 +19,7 @@
 			</div>
 
 			<div id="outerCountainer" class="divLinkPhoto">
-				<div class="bx-wrapper" style="max-width: 970px; background: transparent;">
+				<div class="bx-wrapper" style="box-shadow: none;border: none;">
 					<div class="bx-viewport" aria-live="polite" style="width: 100%; position: relative; height: 169px;">
 						<div class="slider1">
 <%
@@ -50,8 +50,8 @@
 	
 					<div class="bx-controls bx-has-controls-direction">
 						<div class="bx-controls-direction">
-							<a id="goPrev" href="#" title="上一張圖片" style="background: url('${pageContext.request.contextPath}/images/arrow_left.png') no-repeat; width: 40px; height: 54px; left: -45px; top: 45%;"> Prev </a> 
-							<a id="goNext" href="#" title="下一張圖片" style="background: url('${pageContext.request.contextPath}/images/arrow_right.png') no-repeat; width: 40px; height: 54px; right: -45px; top: 45%;"> Next </a>
+							<a id="goPrev" href="#" alt=" " style="background: url('${pageContext.request.contextPath}/images/arrow_left.png') no-repeat; width: 40px; height: 54px; left: -45px; top: 45%;"> Prev </a> 
+							<a id="goNext" href="#" alt=" " style="background: url('${pageContext.request.contextPath}/images/arrow_right.png') no-repeat; width: 40px; height: 54px; right: -45px; top: 45%;background-position: right top;"> Next </a>
 						</div>
 					</div>
 				</div>

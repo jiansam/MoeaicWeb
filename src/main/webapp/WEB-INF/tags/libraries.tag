@@ -12,7 +12,7 @@
 <link href="${pageContext.request.contextPath}/css/easy-responsive-tabs.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css">
 
-<script src="${pageContext.request.contextPath}/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/js/jquery.bxslider.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/jquery-ui-1.12.1/jquery-ui.min.js"></script>
