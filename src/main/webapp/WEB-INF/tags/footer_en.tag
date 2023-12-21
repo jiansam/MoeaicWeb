@@ -64,7 +64,7 @@
 		</div>
 		<div class="information_logo">
 			<div class="information_image">
-				<a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20201130172438" target="_blank" title="Open new window for Web Accessibility Site">
+				<a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20231128100607" target="_blank" title="Open new window for Web Accessibility Site">
 				    <img src="${pageContext.request.contextPath}/images/a1.png" border="0" height="43" alt="Web Priority A Accessibility Approval" />
 				</a>
 			</div>

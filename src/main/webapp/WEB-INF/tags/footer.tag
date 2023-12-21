@@ -82,7 +82,7 @@
 		</div>
 		<div class="information_logo">
 			<div class="information_image">
-				<a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20201130172438" target="_blank" title="無障礙網站[另開新視窗]">
+				<a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20231128100607" target="_blank" title="無障礙網站[另開新視窗]">
 				    <img src="${pageContext.request.contextPath}/images/a1.png" border="0" height="43" alt="通過A檢測等級無障礙網頁檢測" />
 				</a>
 			</div>
