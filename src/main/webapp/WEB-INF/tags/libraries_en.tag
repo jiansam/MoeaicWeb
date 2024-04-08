@@ -10,12 +10,12 @@
 <link href="${pageContext.request.contextPath}/css/content.css" rel="stylesheet" />
 <link href="${pageContext.request.contextPath}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/easy-responsive-tabs.css" rel="stylesheet" type="text/css">
-<link href="${pageContext.request.contextPath}/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/jquery-ui-1.13.2/jquery-ui.css" rel="stylesheet" type="text/css">
 
 <script src="${pageContext.request.contextPath}/js/jquery.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/js/jquery.bxslider.min.js" type="text/javascript"></script>
-<script src="${pageContext.request.contextPath}/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="${pageContext.request.contextPath}/jquery-ui-1.13.2/jquery-ui.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/easy-responsive-tabs.js"></script>
 
 <link href="${pageContext.request.contextPath}/DataTables-1.10.12/media/css/dataTables.bootstrap.css" rel="stylesheet">
