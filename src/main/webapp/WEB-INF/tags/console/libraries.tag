@@ -8,11 +8,11 @@
 <link href="${pageContext.request.contextPath}/metisMenu/metisMenu.min.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/css/sb-admin-2.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="${pageContext.request.contextPath}/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/jquery-ui-1.13.2/jquery-ui.css" rel="stylesheet" type="text/css">
 
 <script src="${pageContext.request.contextPath}/js/jquery-1.12.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="${pageContext.request.contextPath}/jquery-ui-1.13.2/jquery-ui.min.js"></script>
 <script src="${pageContext.request.contextPath}/metisMenu/metisMenu.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/sb-admin-2.js"></script>
 <script src="${pageContext.request.contextPath}/ckeditor-4.5.11/ckeditor.js"></script>
