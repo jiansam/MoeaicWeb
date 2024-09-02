@@ -18,13 +18,8 @@
 <script src="${pageContext.request.contextPath}/jquery-ui-1.13.2/jquery-ui.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/easy-responsive-tabs.js"></script>
 
-<link href="${pageContext.request.contextPath}/DataTables-1.10.12/media/css/dataTables.bootstrap.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/DataTables-1.10.12/extensions/Responsive/css/responsive.bootstrap.css" rel="stylesheet">
-
-<script src="${pageContext.request.contextPath}/DataTables-1.10.12/media/js/jquery.dataTables.min.js"></script>
-<script src="${pageContext.request.contextPath}/DataTables-1.10.12/media/js/dataTables.bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/DataTables-1.10.12/extensions/Responsive/js/dataTables.responsive.min.js"></script>
-<script src="${pageContext.request.contextPath}/DataTables-1.10.12/extensions/Responsive/js/responsive.bootstrap.min.js"></script>
+<link href="${pageContext.request.contextPath}/DataTables-1.10.12/datatables.min.css" rel="stylesheet">
+<script src="${pageContext.request.contextPath}/DataTables-1.10.12/datatables.min.js"></script>
 
 <script type="text/javascript">
 $.extend(true, $.fn.dataTable.defaults, {
